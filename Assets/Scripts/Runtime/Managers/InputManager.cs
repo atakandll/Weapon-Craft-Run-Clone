@@ -19,7 +19,7 @@ namespace Runtime.Managers
         private bool _isTouching;
 
         private float _currentVelocity;
-        private Vector2? _mousePosition;
+        private Vector2? _mousePosition; // nullable
         private Vector3 _moveVector;
 
         private InputData _data;
