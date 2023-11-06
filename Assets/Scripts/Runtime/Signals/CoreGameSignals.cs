@@ -18,6 +18,9 @@ namespace Runtime.Signals
         public UnityAction onPlay = delegate { };
         public UnityAction onReset = delegate { };
         public Func<byte> onGetLevelID = delegate { return 0; };
+        
+        public Func<byte> onGetFireRateLevel = delegate { return 0; };
+        public Func<byte> onGetInitYearLevel = delegate { return 0; };
 
     }
 }

@@ -71,13 +71,13 @@ namespace Runtime.Managers
             OnOpenWinPanel();
         }
 
-        public void OnIncomeUpdate()
+        public void OnFireRateUpdate()
         {
             UISignals.Instance.onClickFireRate?.Invoke();
             UISignals.Instance.onSetFireRateText?.Invoke();
         }
 
-        public void OnStackUpdate()
+        public void OnInitYearUpdate()
         {
             UISignals.Instance.onClickInitYear?.Invoke();
             UISignals.Instance.onSetInitYearText?.Invoke();
