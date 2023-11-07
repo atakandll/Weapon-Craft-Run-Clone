@@ -47,7 +47,7 @@ namespace Runtime.Managers
             CameraSignals.Instance.onChangeCameraState += OnChangeCameraState;
         }
 
-        private void OnSetCinemachineTarget()
+        private void OnSetCinemachineTarget(CameraTargetState state)
         {
             //var playerManager = FindObjectOfType<PlayerManager>();
             //stateDrivenCamera.Follow = playerManager;
