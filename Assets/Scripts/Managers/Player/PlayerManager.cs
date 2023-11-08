@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using DG.Tweening;
+using Managers.Gates;
+using Managers.Magazine;
+using Managers.Weapon;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -43,7 +47,7 @@ namespace Managers.Player
         public int Money;
         public int CurrentLevelIndex;
         public float CurrentPlayerDamage;
-        public int WeaponIndex;
+        [HideInInspector] public int WeaponIndex;
         
 
         #endregion
@@ -135,21 +139,6 @@ namespace Managers.Player
                 }
             }
         }
-
-        private Vector3 GetLimitedLocalPosition(Vector3 position)
-        {
-            position.x = Mathf.Clamp(position.x, -negativeMaxPositionX, maxPositionX);
-            return position;
-        }
-
-        private Vector3 GetNewLocalPosition(float displacementX)
-        {
-            var lastPosition = transform.localPosition;
-            var newPositionX = lastPosition.x + displacementX * moveSensivity;
-            var newPosition = new Vector3(newPositionX, lastPosition.y, lastPosition.z + forwardMoveSpeed * Time.deltaTime);
-            return newPosition;
-        }
-
         private float GetInput()
         {
             var inputX = 0f;
@@ -165,7 +154,6 @@ namespace Managers.Player
             }
             return inputX;
         }
-
         private float GetDisplacement(float inputX)
         {
             var displacementX = 0f;
@@ -173,10 +161,253 @@ namespace Managers.Player
             return displacementX;
 
         }
-
         private float SmootOutDisplacement(float displacementX)
         {
             return Mathf.Clamp(displacementX, -maxDisplacement, maxDisplacement);
         }
+        private Vector3 GetNewLocalPosition(float displacementX)
+        {
+            var lastPosition = transform.localPosition;
+            var newPositionX = lastPosition.x + displacementX * moveSensivity;
+            var newPosition = new Vector3(newPositionX, lastPosition.y, lastPosition.z + forwardMoveSpeed * Time.deltaTime);
+            return newPosition;
+        }
+
+        private Vector3 GetLimitedLocalPosition(Vector3 position)
+        {
+            position.x = Mathf.Clamp(position.x, -negativeMaxPositionX, maxPositionX);
+            return position;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("MovementSlower"))
+            {
+                SetMovementSpeed(slowMovSpeed);
+            }
+            else if (other.CompareTag("MovementFaster"))
+            {
+                SetMovementSpeed(fastMovSpeed);
+            }
+            else if (other.CompareTag("Obstacle"))
+            {
+                KnockbackPlayer();
+                other.tag = "Untagged";
+            }
+            else if (other.CompareTag("Enemy"))
+            {
+                KnockbackPlayer();
+                other.tag = "TouchedEnemy";
+            }
+            else if (other.CompareTag("EnemyPlayerDetector"))
+            {
+                //
+            }
+            else if (other.CompareTag("Chest"))
+            {
+               //
+            }
+            else if (other.CompareTag("MagazinesPlayerCollider"))
+            {
+                other.transform.parent.GetComponent<MagazineManager>().MoveTowardsLeftPlatform();
+            }
+            else if (other.CompareTag("Money"))
+            {
+                IncrementMoney(other.GetComponent<Money>().value);
+                Destroy(other.gameObject);
+            }
+            else if (other.CompareTag("FirstSlidingGateCollider"))
+            {
+                IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().firstLoadInitYear);
+
+                other.transform.parent.parent.GetComponent<SlidingGates>()
+                    .PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().bulletsInFirstLoad);
+
+                //other.transform.parent.parent.GetComponent<SlidingGates>().LockAllGates();
+            }
+            else if(other.CompareTag("SecondSlidingGateCol"))
+            {
+                IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().secondLoadInitYear);
+
+                other.transform.parent.parent.GetComponent<SlidingGates>().
+                    PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().bulletsInSecondLoad);
+
+                //other.transform.parent.parent.GetComponent<SlidingGate>().LockAllGates();
+            }
+            else if(other.CompareTag("ThirdSlidingGateCol"))
+            {
+                IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().thirdLoadInitYear);
+
+                other.transform.parent.parent.GetComponent<SlidingGates>().
+                    PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().bulletsInThirdLoad);
+
+                //other.transform.parent.parent.GetComponent<SlidingGate>().LockAllGates();
+            }
+            else if (other.CompareTag("FinishLine"))
+            {
+                //GameManager.Instance.CameraStateChange();
+            }
+           
+        }
+        private void OnTriggerExit(Collider other) 
+        {
+            if(other.CompareTag("MovementSlower"))
+            {
+                SetMovementSpeed(originalMoveSpeed);
+            }
+            else if(other.CompareTag("MovementFaster"))
+            {
+                SetMovementSpeed(originalMoveSpeed);
+            }
+        }
+      
+
+        private void WeaponSelector()
+        {
+            if (_inGameInitYear <= WeaponChoosingInitYearsLimit[0] && currentWeapon != weapons[0])
+            {
+                for (int i = 0; i < weapons.Count; i++)
+                {
+                    weapons[i].SetActive(false);
+                }
+
+                currentWeapon = weapons[0];
+                WeaponIndex = 0;
+                currentWeapon.SetActive(true);
+            }
+
+            if (_inGameInitYear > WeaponChoosingInitYearsLimit[0] && InitYear <= WeaponChoosingInitYearsLimit[1] &&
+                currentWeapon != weapons[1])
+            {
+                for (int i = 0; i < weapons.Count; i++)
+                {
+                    weapons[i].SetActive(false);
+                }
+
+                currentWeapon = weapons[1];
+                WeaponIndex = 1;
+                currentWeapon.SetActive(true);
+
+            }
+            
+            if (_inGameInitYear > WeaponChoosingInitYearsLimit[1] && InitYear <= WeaponChoosingInitYearsLimit[2] &&
+                currentWeapon != weapons[2])
+            {
+                for (int i = 0; i < weapons.Count; i++)
+                {
+                    weapons[i].SetActive(false);
+                }
+
+                currentWeapon = weapons[2];
+                WeaponIndex = 2;
+                currentWeapon.SetActive(true);
+
+            }
+            if (_inGameInitYear > WeaponChoosingInitYearsLimit[2] && InitYear <= WeaponChoosingInitYearsLimit[3] &&
+                currentWeapon != weapons[3])
+            {
+                for (int i = 0; i < weapons.Count; i++)
+                {
+                    weapons[i].SetActive(false);
+                }
+
+                currentWeapon = weapons[3];
+                WeaponIndex = 3;
+                currentWeapon.SetActive(true);
+
+            }
+
+            currentWeapon.transform.parent = transform;
+            UpdatePlayersDamage();
+            //GameManager.Instance.UpdatePlayerDamage();
+
+        }
+
+        public void KnockbackPlayer()
+        {
+            KnockBacked = true;
+            IncrementInGameInitYear(-1);
+
+            transform.DOMove(
+                new Vector3(transform.position.x, transform.position.y, transform.position.z - knockbackValue),
+                knockbackDur).onComplete(ResetKnockback);
+            //UIManager.Instance.UpdateInitYearText();
+        }
+
+        private void ResetKnockback()
+        {
+            KnockBacked = false;
+        }
+
+        public void PlayerDeath()
+        {
+            DOTween.Clear(currentWeapon.gameObject);
+            currentWeapon.transform.DORotate(deathEndValue,deathDur,RotateMode.Fast);
+            _boxCollider.isTrigger = false;
+            _rigidbody.useGravity = true;
+        }
+
+        public void UpdatePlayersDamage()
+        {
+            CurrentPlayerDamage = playerDamage + currentWeapon.GetComponent<WeaponManager>().damage;
+        }
+
+        private void SetMovementSpeed(float newMoveSpeed)
+        {
+            forwardMoveSpeed = newMoveSpeed;
+        }
+
+        public void SetUpgradedValues()
+        {
+            //
+        }
+        private void SetStartingValues()
+        {
+            _inGameFireRage = FireRange;
+            _inGameFireRate = FireRate;
+            _inGameInitYear = InitYear;
+            WeaponSelector();
+        }
+        public int GetInGameInitYear()
+        {
+            return _inGameInitYear;
+        }
+        public float GetInGameFireRange()
+        {
+            return _inGameFireRage;
+        }
+        public float GetInGateFireRate()
+        {
+            return _inGameFireRate;
+        }
+        public void IncrementInGameFireRange(float value)
+        {
+            _inGameFireRage += value;
+        }
+        public void IncrementCurrentFireRate(float value)
+        {
+            float effectiveValue = value / 100;
+            _inGameFireRate += effectiveValue;
+        }
+        public void IncrementInGameInitYear(int value)
+        {
+            if(value == -1) 
+            {
+                
+                //UIManager.instance.DisplayInitYearReduce();
+            }
+            _inGameInitYear += value;
+            //UIManager.instance.UpdateInitYearText();
+            //UIManager.instance.UpdateWeaponBar();
+
+            WeaponSelector();
+        }
+        public void IncrementMoney(int value)
+        {
+            Money += Mathf.RoundToInt(value * Income);
+            //UIManager.instance.UpdateMoneyText();
+        }
+
+       
     }
 }

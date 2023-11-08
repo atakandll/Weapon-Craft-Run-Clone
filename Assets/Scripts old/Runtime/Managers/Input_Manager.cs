@@ -9,7 +9,7 @@ using UnityEngine.EventSystems;
 
 namespace Runtime.Managers
 {
-    public class InputManager : MonoBehaviour
+    public class Input_Manager : MonoBehaviour
     {
         #region Self Variables
 

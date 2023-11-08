@@ -4,13 +4,13 @@ using UnityEngine;
 
 namespace Runtime.Managers
 {
-    public class FeatureManager : MonoBehaviour
+    public class Feature_Manager : MonoBehaviour
     {
          #region Self Variables
 
         #region Public Variables
 
-        public FeatureManager()
+        public Feature_Manager()
         {
             _onClickFireRateCommand = new OnClickFireRateCommand(this , ref _newPriceTag, ref _fireRateLevel);
             _onClickInitYearCommand = new OnClickInitYearCommand(this, ref _newPriceTag, ref _initYearLevel);

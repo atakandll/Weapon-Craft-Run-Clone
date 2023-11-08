@@ -2,7 +2,7 @@ using Runtime.Commands.Level;
 using Runtime.Signals;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour
+public class Level_Manager : MonoBehaviour
 {
     #region Self Variables
 

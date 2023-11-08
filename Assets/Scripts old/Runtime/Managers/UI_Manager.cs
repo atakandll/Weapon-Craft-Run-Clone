@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Runtime.Managers
 {
-    public class UIManager : MonoBehaviour
+    public class UI_Manager : MonoBehaviour
     {
           private void OnEnable()
         {

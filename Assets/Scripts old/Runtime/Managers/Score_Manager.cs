@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Runtime.Managers
 {
-    public class ScoreManager : MonoBehaviour
+    public class Score_Manager : MonoBehaviour
     {
         
         #region Self Variables

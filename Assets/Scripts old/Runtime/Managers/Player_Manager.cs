@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace Runtime.Managers
 {
-    public class PlayerManager : MonoBehaviour
+    public class Player_Manager : MonoBehaviour
     {
         #region Self Variables
 
