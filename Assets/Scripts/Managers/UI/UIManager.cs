@@ -43,6 +43,7 @@ namespace Managers.UI
 
         [Header("End Game Panel")] [SerializeField]
         private GameObject endHud;
+        [SerializeField] GameObject initYearImage;
         
         [Header("Upgrades")]
         [SerializeField] private TextMeshProUGUI fireRateLevelText;
@@ -196,5 +197,105 @@ namespace Managers.UI
             incomeCostText.text = "$" + (UpgradeManager.Instance.Costs[PlayerManager.Instance.IncomeValueIndex].ToString());
 
         }
+        public void OnFireRateUpdatePressed()
+        {
+            if (PlayerManager.Instance.Money >=
+                UpgradeManager.Instance.Costs[PlayerManager.Instance.FireRateValueIndex])
+            {
+                PlayerManager.Instance.Money -=
+                    UpgradeManager.Instance.Costs[PlayerManager.Instance.FireRateValueIndex];
+                
+                PlayerManager.Instance.FireRateValueIndex += 1;
+                fireRateLevelText.text = "Level " + (PlayerManager.Instance.FireRateValueIndex + 1).ToString();
+                fireRateCostText.text = "$" + (UpgradeManager.Instance.Costs[PlayerManager.Instance.FireRateValueIndex].ToString());
+                
+                PlayerManager.Instance.SetUpgradedValues();
+                UpdateMoneyText();
+                
+            }
+        }
+        public void OnFireRangeUpdatePressed()
+        {
+            if (PlayerManager.Instance.Money >=
+                UpgradeManager.Instance.Costs[PlayerManager.Instance.FireRangeValueIndex])
+            {
+                PlayerManager.Instance.Money -=
+                    UpgradeManager.Instance.Costs[PlayerManager.Instance.FireRangeValueIndex];
+                
+                PlayerManager.Instance.FireRangeValueIndex += 1;
+                fireRangeLevelText.text = "Level " + (PlayerManager.Instance.FireRangeValueIndex + 1).ToString();
+                fireRangeCostText.text = "$" + (UpgradeManager.Instance.Costs[PlayerManager.Instance.FireRangeValueIndex].ToString());
+                
+                PlayerManager.Instance.SetUpgradedValues();
+                UpdateMoneyText();
+                
+            }
+        }
+
+        public void OnInitYearUpdatePressed()
+        {
+            if (PlayerManager.Instance.Money >=
+                UpgradeManager.Instance.Costs[PlayerManager.Instance.InitYearValueIndex])
+            {
+                PlayerManager.Instance.Money -=
+                    UpgradeManager.Instance.Costs[PlayerManager.Instance.InitYearValueIndex];
+                PlayerManager.Instance.InitYearValueIndex += 1;
+                initYearLevelText.text = "Level " + (PlayerManager.Instance.InitYearValueIndex + 1).ToString();
+                initYearCostText.text = "$" + (UpgradeManager.Instance.Costs[PlayerManager.Instance.InitYearValueIndex].ToString());
+                
+                UpdateWeaponBar();
+                UpdateMoneyText();
+                PlayerManager.Instance.SetUpgradedValues();
+                UpdateInitYearText();
+            }
+        }
+
+        public void OnIncomeUpdatePressed()
+        {
+            if (PlayerManager.Instance.Money >=
+                UpgradeManager.Instance.Costs[PlayerManager.Instance.IncomeValueIndex])
+            {
+                PlayerManager.Instance.Money -=
+                    UpgradeManager.Instance.Costs[PlayerManager.Instance.IncomeValueIndex];
+                PlayerManager.Instance.IncomeValueIndex += 1;
+                incomeLevelText.text = "Level " + (PlayerManager.Instance.IncomeValueIndex + 1).ToString();
+                incomeCostText.text = "$" + (UpgradeManager.Instance.Costs[PlayerManager.Instance.IncomeValueIndex].ToString());
+                
+                PlayerManager.Instance.SetUpgradedValues();
+                UpdateMoneyText();
+                
+            }
+            
+        }
+        public void OnContinueButtonPressed()
+        {
+            GameManager.Instance.LoadNextScene();
+        }
+
+        public void FinishHud()
+        {
+            endHud.SetActive(true);
+            fillImage.gameObject.SetActive(false);
+            initYearImage.SetActive(false);
+            UpdateEndingHudTexts();
+        }
+
+        public void DisplayInitYearReduce()
+        {
+            reducerText.gameObject.SetActive(true);
+            reducerText.rectTransform.anchoredPosition = reducerTextResetPos;
+            
+            reducerText.rectTransform.DOAnchorPos(new Vector2(reducerText.rectTransform.anchoredPosition.x,
+                    reducerText.rectTransform.anchoredPosition.y - reducerMoveValue),reducerMoveDur).
+                OnPlay(() => {reducerText.DOFade(0,reducerMoveDur);}).
+                OnComplete(() => 
+                {
+                    reducerText.DOFade(255,reducerMoveDur);
+                    reducerText.rectTransform.anchoredPosition = reducerTextResetPos;
+                    reducerText.gameObject.SetActive(false);
+                });
+        }
+       
+            
     }
 }
