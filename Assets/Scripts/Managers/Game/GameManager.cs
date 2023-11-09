@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using Cinemachine;
 using Managers.Player;
+using Managers.UI;
+using Managers.Upgrades;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
@@ -100,6 +102,7 @@ namespace Managers.Game
         {
             GameHasEnded = true;
             PlayerManager.Instance.PlayerDeath();
+            UIManager.Instance.FinishHud();
             
         }
 
@@ -122,5 +125,7 @@ namespace Managers.Game
             PlayerManager.Instance.CurrentLevelIndex++;
             SceneManager.LoadScene(0);
         }
+
+        
     }
 }

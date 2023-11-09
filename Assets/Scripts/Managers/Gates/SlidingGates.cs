@@ -80,12 +80,8 @@ namespace Managers.Gates
        
         public void LoadGate(int i)
         {
-            if(i >= lastBulletsSpawnTransforms.Count)
-            {
-                Debug.Log("break load gate");
-                return;
-            }
-
+            if(i >= lastBulletsSpawnTransforms.Count) return;
+            
             GameObject spawnedBullet = Instantiate(bullet,BucketTransform);
             spawnedBullet.transform.DOMove(lastBulletsSpawnTransforms[i].position,moveDur,false);
             bulletsInLoad.Add(spawnedBullet);

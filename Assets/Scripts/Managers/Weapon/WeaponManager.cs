@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using DG.Tweening;
 using Managers.Bullet;
+using Managers.Game;
+using Managers.Player;
 using UnityEngine;
 
 namespace Managers.Weapon
@@ -48,12 +50,21 @@ namespace Managers.Weapon
         }
         private void Update() 
         {
+            if(!GameManager.Instance.GameHasStarted) return;
+            if(GameManager.Instance.GameHasEnded) return;
+        
+            if(PlayerManager.Instance.KnockBacked)
+            {
+                UpdateFireRate();
+                return;
+            }
+        
             currentFireRate -= Time.deltaTime;
         
             if(currentFireRate <= 0)
             {
                 FireBullet();
-                
+                UpdateFireRate();
             }
         }
         public void FireBullet()
@@ -65,16 +76,24 @@ namespace Managers.Weapon
             
 
             GameObject firedBullet = Instantiate(bulletPrefab, weaponType.position ,Quaternion.identity);
-        
+
             firedBullet.GetComponent<BulletManager>().firedPoint = weaponType;
             firedBullet.GetComponent<BulletManager>().SetRelatedWeapon(gameObject);
             StartCoroutine(MuzzleFlashoff());
         }
         IEnumerator MuzzleFlashoff()
         {
-            yield return new WaitForSeconds(0.3f); 
+            yield return new WaitForSeconds(0.3f); // Wait for 2 seconds
             muzzleFlashVFX.SetActive(false);
         
+        }
+        public float GetWeaponsFireRange()
+        {
+            return PlayerManager.Instance.GetInGameFireRange() + fireRange;
+        }
+        private void UpdateFireRate()
+        {
+            currentFireRate = PlayerManager.Instance.GetInGateFireRate() + fireRate;
         }
         
     }

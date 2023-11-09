@@ -1,4 +1,9 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
+using Managers.Game;
+using Managers.Magazine;
+using Managers.Obstacles;
+using Managers.Player;
 using Managers.Weapon;
 using UnityEngine;
 
@@ -47,11 +52,11 @@ namespace Managers.Bullet
             
             if (!enemyBullet)
             {
-               //
+               fireDistance = relatedWeapon.GetComponent<WeaponManager>().GetWeaponsFireRange();
             }
             else if (enemyBullet)
             {
-                //
+                fireDistance = GameManager.Instance.EnemyFireRange;
             }
 
             transform.DORotate(rotationValue, 0f);
@@ -82,6 +87,80 @@ namespace Managers.Bullet
                 {
                     Destroy(gameObject); 
                 }
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (hasHit) return;
+
+            if (other.CompareTag("Untagged"))
+            {
+                PlayHitFX();
+                Destroy(gameObject);
+            }
+
+            if (other.CompareTag("Chest"))
+            {
+                hasHit = true;
+                if (!enemyBullet)
+                {
+                    PlayHitFX();
+                    other.GetComponent<ChestManager>().TakeDamage(GameManager.Instance.playerDamage);
+                    Destroy(gameObject);
+                }
+            }
+            else if (other.CompareTag("SlidingGate"))
+            {
+                PlayHitFX();
+                Destroy(gameObject);
+            }
+            else if (other.CompareTag("Magazine"))
+            {
+                if (!enemyBullet)
+                {
+                    PlayHitFX();
+                    other.GetComponent<MagazineManager>().MagazineShot();
+                }
+
+                Destroy(gameObject);
+                
+            }
+            else if (other.CompareTag("Player"))
+            {
+                if (enemyBullet)
+                {
+                    
+                    PlayerManager.Instance.IncrementInGameInitYear(-1);
+                    Destroy(gameObject);
+                }
+            }
+            else if (other.CompareTag("Enemy"))
+            {
+                if (!enemyBullet)
+                {
+                    PlayHitFX();
+                    other.GetComponent<EnemyManager>().TakeDamage(GameManager.Instance.playerDamage);
+                    Destroy(gameObject);
+                }
+            }
+            else if (other.CompareTag("TouchedEnemy"))
+            {
+                if (!enemyBullet)
+                {
+                    PlayHitFX();
+                    other.GetComponent<EnemyManager>().TakeDamage(GameManager.Instance.playerDamage);
+                    Destroy(gameObject);
+                }
+            }
+        }
+
+        private void PlayHitFX()
+        {
+            if (hitEffect != null)
+            {
+                GameObject hitfx = Instantiate(hitEffect, transform.position, Quaternion.identity);
+                hitfx.GetComponent<ParticleSystem>().Play();
             }
         }
         public void SetRelatedWeapon(GameObject newWeapon)

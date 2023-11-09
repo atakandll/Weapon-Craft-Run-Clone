@@ -4,6 +4,7 @@ using Managers.Game;
 using Managers.Gates;
 using Managers.Magazine;
 using Managers.Obstacles;
+using Managers.UI;
 using Managers.Upgrades;
 using Managers.Weapon;
 using UnityEngine;
@@ -334,7 +335,7 @@ namespace Managers.Player
                     (new Vector3(transform.position.x,transform.position.y, transform.position.z - knockbackValue),knockbackDur).
                 OnComplete(ResetKnockback);
             
-            //UIManager.Instance.UpdateInitYearText();
+            UIManager.Instance.UpdateInitYearText();
         }
 
         private void ResetKnockback()
@@ -402,18 +403,21 @@ namespace Managers.Player
             if(value == -1) 
             {
                 
-                //UIManager.instance.DisplayInitYearReduce();
+                UIManager.Instance.DisplayInitYearReduce();
             }
+            
             _inGameInitYear += value;
-            //UIManager.instance.UpdateInitYearText();
-            //UIManager.instance.UpdateWeaponBar();
+            
+            UIManager.Instance.UpdateInitYearText();
+            UIManager.Instance.UpdateWeaponBar();
 
             WeaponSelector();
         }
         public void IncrementMoney(int value)
         {
             Money += Mathf.RoundToInt(value * Income);
-            //UIManager.instance.UpdateMoneyText();
+            
+            UIManager.Instance.UpdateMoneyText();
         }
 
        

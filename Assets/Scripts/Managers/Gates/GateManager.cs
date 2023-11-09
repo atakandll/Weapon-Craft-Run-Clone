@@ -69,6 +69,17 @@ namespace Managers.Gates
         {
             isGateActive = true;
             tag = "Gate";
+            ChooseOperation();
+            UpdateGateText();
+            DamageSelectionAndTextUpdate();
+            originalScale = transform.localScale;
+            if(transform.parent.tag == "GateManager")
+            {
+                if(transform.parent.GetComponentInChildren<BoxCollider>())
+                {
+                    gatesBoxColliders = transform.parent.GetComponentsInChildren<BoxCollider>();
+                }
+            }
             
         }
 

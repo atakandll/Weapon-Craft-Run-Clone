@@ -5,8 +5,7 @@ namespace Managers.Upgrades
 {
     public class UpgradeManager : MonoBehaviour
     {
-       
-
+        
         #region Self Variables
 
         #region Public Variables
@@ -18,9 +17,7 @@ namespace Managers.Upgrades
         public List<float> FireRateValues;
         public List<float> FireRangeValues;
         public List<int> Costs;
-
-
-
+        
         #endregion
 
         #region Serialized Variables
@@ -31,9 +28,7 @@ namespace Managers.Upgrades
         [SerializeField] private int fireRateChangeLevelIndex;
         [SerializeField] private float fireRangeStartValue, fireRangeIncreasingValue;
         [SerializeField] private int costStartingValue, costIncrasingValue;
-
-
-
+        
         #endregion
 
         #endregion
