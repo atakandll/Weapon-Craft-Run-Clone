@@ -3,7 +3,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
-namespace Managers.Chest
+namespace Managers.Obstacles
 {
     public class ChestManager : MonoBehaviour
     {
