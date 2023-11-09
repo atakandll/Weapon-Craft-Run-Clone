@@ -218,28 +218,28 @@ namespace Managers.Player
             }
             else if (other.CompareTag("FirstSlidingGateCollider"))
             {
-                IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().firstLoadInitYear);
+                IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().FirstLoadInitYear);
 
                 other.transform.parent.parent.GetComponent<SlidingGates>()
-                    .PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().bulletsInFirstLoad);
+                    .PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().BulletsinFirstLoad);
 
                 //other.transform.parent.parent.GetComponent<SlidingGates>().LockAllGates();
             }
             else if(other.CompareTag("SecondSlidingGateCol"))
             {
-                IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().secondLoadInitYear);
+                IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().SecondLoadInitYear);
 
                 other.transform.parent.parent.GetComponent<SlidingGates>().
-                    PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().bulletsInSecondLoad);
+                    PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().BulletinSecondLoad);
 
                 //other.transform.parent.parent.GetComponent<SlidingGate>().LockAllGates();
             }
             else if(other.CompareTag("ThirdSlidingGateCol"))
             {
-                IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().thirdLoadInitYear);
+                IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().ThirdLoadInitYear);
 
                 other.transform.parent.parent.GetComponent<SlidingGates>().
-                    PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().bulletsInThirdLoad);
+                    PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().BulletsinThirdLoad);
 
                 //other.transform.parent.parent.GetComponent<SlidingGate>().LockAllGates();
             }

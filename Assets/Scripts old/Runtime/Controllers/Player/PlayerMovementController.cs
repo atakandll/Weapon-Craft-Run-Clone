@@ -12,7 +12,7 @@ namespace Runtime.Controllers.Player
 
         #region Serialized Variables
 
-        [SerializeField] private PlayerManager manager;
+        [SerializeField] private Player_Manager manager;
         [SerializeField] private new Rigidbody rigidbody;
 
         #endregion

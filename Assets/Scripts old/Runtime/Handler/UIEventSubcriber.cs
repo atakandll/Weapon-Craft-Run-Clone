@@ -19,7 +19,7 @@ namespace Runtime.Handler
 
         #region Private Variables
 
-         private UIManager _manager;
+         private UI_Manager _manager;
 
         #endregion
 
@@ -32,7 +32,7 @@ namespace Runtime.Handler
 
         private void FindReferences()
         {
-            _manager = FindObjectOfType<UIManager>();
+            _manager = FindObjectOfType<UI_Manager>();
         }
 
         private void OnEnable()

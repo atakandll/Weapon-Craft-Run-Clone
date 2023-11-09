@@ -6,11 +6,11 @@ namespace Runtime.Commands.Feature
 {
     public class OnClickFireRateCommand : MonoBehaviour
     {
-        private readonly FeatureManager _featureManager;
+        private readonly Feature_Manager _featureManager;
         private int _newPriceTag;
         private byte _fireRateLevel;
 
-        public OnClickFireRateCommand(FeatureManager featureManager, ref int newPriceTag, ref byte fireRateLevel)
+        public OnClickFireRateCommand(Feature_Manager featureManager, ref int newPriceTag, ref byte fireRateLevel)
         {
             _featureManager = featureManager;
             _newPriceTag = newPriceTag;

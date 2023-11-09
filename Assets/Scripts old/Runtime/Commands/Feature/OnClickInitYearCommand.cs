@@ -7,11 +7,11 @@ namespace Runtime.Commands.Feature
     public class OnClickInitYearCommand : MonoBehaviour
     {
         
-        private FeatureManager _featureManager;
+        private Feature_Manager _featureManager;
         private byte _initYearLevel;
         private int _newPriceTag;
 
-        public OnClickInitYearCommand(FeatureManager featureManager, ref int newPriceTag, ref byte  initYearLevel)
+        public OnClickInitYearCommand(Feature_Manager featureManager, ref int newPriceTag, ref byte  initYearLevel)
         {
             _featureManager = featureManager;
             _newPriceTag = newPriceTag;

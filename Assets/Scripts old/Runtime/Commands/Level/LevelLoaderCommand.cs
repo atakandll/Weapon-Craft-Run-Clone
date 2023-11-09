@@ -8,9 +8,9 @@ namespace Runtime.Commands.Level
 {
     public class LevelLoaderCommand : ICommand
     {
-        private readonly LevelManager _levelManager;
+        private readonly Level_Manager _levelManager;
 
-        public LevelLoaderCommand(LevelManager levelManager)
+        public LevelLoaderCommand(Level_Manager levelManager)
         {
             _levelManager = levelManager;
         }

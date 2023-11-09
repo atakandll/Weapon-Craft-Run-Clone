@@ -7,9 +7,9 @@ namespace Runtime.Commands.Level
 {
     public class LevelDestroyerCommand : ICommand
     {
-        private readonly LevelManager _levelManager;
+        private readonly Level_Manager _levelManager;
 
-        public LevelDestroyerCommand(LevelManager levelManager)
+        public LevelDestroyerCommand(Level_Manager levelManager)
         {
             _levelManager = levelManager;
         }

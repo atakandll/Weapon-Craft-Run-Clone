@@ -1,5 +1,7 @@
 ﻿using System;
 using DG.Tweening;
+using Managers.Bullet;
+using Managers.Player;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -91,12 +93,12 @@ namespace Managers.Gates
         {
             if(other.CompareTag("Bullet") && isGateActive)
             {
-                if(!other.GetComponent<Bullet>().stickmansBullet)
+                if(!other.GetComponent<BulletManager>().enemyBullet)
                 {
-                    if(!other.GetComponent<Bullet>().hasHit)
+                    if(!other.GetComponent<BulletManager>().hasHit)
                     {
                         TakeDamage();
-                        other.GetComponent<Bullet>().hasHit = true;
+                        other.GetComponent<BulletManager>().hasHit = true;
                     }
                 }
             
@@ -113,15 +115,15 @@ namespace Managers.Gates
                 }
                 if(fireRateGate)
                 {
-                    Player.instance.IncrementCurrentFireRate(gateValue);
+                    PlayerManager.Instance.IncrementCurrentFireRate(gateValue);
                 }
                 else if(fireRangeGate)
                 {
-                    Player.instance.IncrementInGameFireRange(gateValue);
+                    PlayerManager.Instance.IncrementInGameFireRange(gateValue);
                 }
                 else if(yearGate)
                 {
-                    Player.instance.IncrementInGameInitYear(Mathf.RoundToInt(gateValue));
+                    PlayerManager.Instance.IncrementInGameInitYear(Mathf.RoundToInt(gateValue));
                 }
                 gameObject.SetActive(false);
             }
