@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using Managers.Game;
 using UnityEngine;
 
 namespace Managers.Gates

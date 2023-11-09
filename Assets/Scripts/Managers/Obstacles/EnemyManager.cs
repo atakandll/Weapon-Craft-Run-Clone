@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Managers.Bullet;
+using Managers.Game;
 using TMPro;
 using UnityEngine;
 
