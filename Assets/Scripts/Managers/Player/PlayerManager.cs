@@ -4,6 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 using DG.Tweening;
 using Managers.Gates;
 using Managers.Magazine;
+using Managers.Upgrades;
 using Managers.Weapon;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -223,7 +224,7 @@ namespace Managers.Player
                 other.transform.parent.parent.GetComponent<SlidingGates>()
                     .PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().BulletsinFirstLoad);
 
-                //other.transform.parent.parent.GetComponent<SlidingGates>().LockAllGates();
+                other.transform.parent.parent.GetComponent<SlidingGates>().LockAllGates();
             }
             else if(other.CompareTag("SecondSlidingGateCol"))
             {
@@ -232,7 +233,7 @@ namespace Managers.Player
                 other.transform.parent.parent.GetComponent<SlidingGates>().
                     PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().BulletinSecondLoad);
 
-                //other.transform.parent.parent.GetComponent<SlidingGate>().LockAllGates();
+                other.transform.parent.parent.GetComponent<SlidingGates>().LockAllGates();
             }
             else if(other.CompareTag("ThirdSlidingGateCol"))
             {
@@ -241,7 +242,7 @@ namespace Managers.Player
                 other.transform.parent.parent.GetComponent<SlidingGates>().
                     PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().BulletsinThirdLoad);
 
-                //other.transform.parent.parent.GetComponent<SlidingGate>().LockAllGates();
+                other.transform.parent.parent.GetComponent<SlidingGates>().LockAllGates();
             }
             else if (other.CompareTag("FinishLine"))
             {
@@ -328,9 +329,9 @@ namespace Managers.Player
             KnockBacked = true;
             IncrementInGameInitYear(-1);
 
-            transform.DOMove(
-                new Vector3(transform.position.x, transform.position.y, transform.position.z - knockbackValue),
-                knockbackDur).onComplete(ResetKnockback);
+            transform.DOMove
+                    (new Vector3(transform.position.x,transform.position.y, transform.position.z - knockbackValue),knockbackDur).
+                OnComplete(ResetKnockback);
             //UIManager.Instance.UpdateInitYearText();
         }
 
@@ -359,7 +360,12 @@ namespace Managers.Player
 
         public void SetUpgradedValues()
         {
-            //
+            InitYear = UpgradeManager.Instance.InitYearValues[InitYearValueIndex];
+            FireRange = UpgradeManager.Instance.FireRangeValues[FireRangeValueIndex];
+            FireRate = UpgradeManager.Instance.FireRateValues[FireRateValueIndex];
+            Income = UpgradeManager.Instance.IncomeValues[IncomeValueIndex];
+            
+            SetStartingValues();
         }
         private void SetStartingValues()
         {

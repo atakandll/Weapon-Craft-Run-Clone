@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DG.Tweening;
+using Managers.Gates;
 using UnityEngine;
 
 namespace Managers.Magazine
@@ -109,16 +110,16 @@ namespace Managers.Magazine
         {
             tag = "Magazine";
             isMovingLeftPlatform = false;
-            Vector3 positionToMove = other.GetComponent<SlidingGate>().bucketTransform.position;
+            Vector3 positionToMove = other.GetComponent<SlidingGates>().BucketTransform.position;
             transform.DOMove(positionToMove, slidingGateDOMoveDur);
             transform.DORotate(slidingGatePosRot,slidingGateDOMoveDur).OnComplete(UnloadMagazine);
             for (int i = 0; i < bulletsInClip.Count; i++)
             {
                 if(!bulletsInClip[i].activeSelf) break;
-                other.GetComponent<SlidingGate>().bulletsInBucket.Add(bulletsInClip[i]);
+                other.GetComponent<SlidingGates>().BulletsInBucket.Add(bulletsInClip[i]);
             }
         
-            other.GetComponent<SlidingGate>().EquliazeLists();
+            other.GetComponent<SlidingGates>().EqualizeLists();
         }
 
         private void UnloadMagazine()
@@ -135,7 +136,7 @@ namespace Managers.Magazine
 
         public void MagazineTravel()
         {
-            transform.DOMove(travelPos.position,GameManager.instance.magazineTravelDur).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
+            transform.DOMove(travelPos.position,GameManager.Instance.MagazineTravelDuration).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
         }
         
     }

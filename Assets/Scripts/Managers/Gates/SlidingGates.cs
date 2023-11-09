@@ -35,7 +35,7 @@ namespace Managers.Gates
         [SerializeField] private float bulletGap;
         [SerializeField] private float moveDur = 0.1f;
         [SerializeField] Material greenMat;
-        [FormerlySerializedAs("firstGate")] [SerializeField] GameObject FirstGate;
+        [SerializeField] GameObject FirstGate;
         [SerializeField] GameObject SecondGate;
 
         #endregion
@@ -78,29 +78,7 @@ namespace Managers.Gates
                 }
             }
         }
-        public void EquliazeLists()
-        {
-            if (BulletsInBucket != null)
-            {
-                var gameObjects = BulletsInBucket.Distinct().ToList();
-                
-                for (int i = bulletCounter; i < BulletsInBucket.Count; i++)
-                {
-                    if (BulletsInBucket.Count <= GameManager.Instance.NumOfBulletsInLoad)
-                    {
-                        currentCounter++;
-
-                        if (currentCounter >= 3)
-                        {
-                            LoadGate(bulletCounter);
-
-                            ++bulletCounter;
-                            currentCounter = 0;
-                        }
-                    }
-                }
-            }
-        }
+       
         public void LoadGate(int i)
         {
             if(i >= lastBulletsSpawnTransforms.Count)
