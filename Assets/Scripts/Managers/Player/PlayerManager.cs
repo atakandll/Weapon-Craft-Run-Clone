@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
+﻿using System.Collections.Generic;
 using DG.Tweening;
+using Managers.Game;
 using Managers.Gates;
 using Managers.Magazine;
+using Managers.Obstacles;
 using Managers.Upgrades;
 using Managers.Weapon;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Managers.Player
@@ -202,11 +201,11 @@ namespace Managers.Player
             }
             else if (other.CompareTag("EnemyPlayerDetector"))
             {
-                //
+                other.GetComponent<EnemyManager>().CanShoot = true;
             }
             else if (other.CompareTag("Chest"))
             {
-               //
+                GameManager.Instance.EndLevel();
             }
             else if (other.CompareTag("MagazinesPlayerCollider"))
             {
@@ -246,7 +245,7 @@ namespace Managers.Player
             }
             else if (other.CompareTag("FinishLine"))
             {
-                //GameManager.Instance.CameraStateChange();
+                GameManager.Instance.CameraStateChange();
             }
            
         }
@@ -319,8 +318,10 @@ namespace Managers.Player
             }
 
             currentWeapon.transform.parent = transform;
+            
             UpdatePlayersDamage();
-            //GameManager.Instance.UpdatePlayerDamage();
+            
+            GameManager.Instance.UpdatePlayerDamage();
 
         }
 
@@ -332,6 +333,7 @@ namespace Managers.Player
             transform.DOMove
                     (new Vector3(transform.position.x,transform.position.y, transform.position.z - knockbackValue),knockbackDur).
                 OnComplete(ResetKnockback);
+            
             //UIManager.Instance.UpdateInitYearText();
         }
 

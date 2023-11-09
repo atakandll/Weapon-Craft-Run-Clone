@@ -1,5 +1,4 @@
-﻿using System;
-using DG.Tweening;
+﻿using DG.Tweening;
 using Managers.Bullet;
 using Managers.Player;
 using TMPro;
@@ -8,7 +7,7 @@ using Random = UnityEngine.Random;
 
 namespace Managers.Gates
 {
-    public class Gate : MonoBehaviour
+    public class GateManager : MonoBehaviour
     {
         #region Self Variables
 

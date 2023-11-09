@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using DG.Tweening;
 using Managers.Bullet;
-using Runtime.Managers;
 using UnityEngine;
 
 namespace Managers.Weapon

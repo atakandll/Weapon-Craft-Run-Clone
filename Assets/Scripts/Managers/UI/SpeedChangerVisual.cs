@@ -1,7 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Managers
+namespace Managers.UI
 {
     public class SpeedChangerVisual : MonoBehaviour
     {

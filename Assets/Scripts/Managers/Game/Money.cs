@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Managers
+namespace Managers.Game
 {
     public class Money : MonoBehaviour
     {
