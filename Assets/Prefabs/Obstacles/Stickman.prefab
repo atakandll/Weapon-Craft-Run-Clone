@@ -617,8 +617,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2950768397704176558}
   - component: {fileID: 3420911919893464155}
+  - component: {fileID: 1573488616}
   - component: {fileID: 1573488619}
-  - component: {fileID: 5742668298434226522}
   m_Layer: 0
   m_Name: Stickman
   m_TagString: Stickman
@@ -636,7 +636,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2816086, y: 0.2816086, z: 0.2816086}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7251761827641901882}
   - {fileID: 6586217401253718355}
@@ -666,7 +666,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1573488616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2574067315312916756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72bfcff8040181d488215f15eca9a497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 6354095560807762723, guid: c5084f384eeb52043933a27c5730fcee, type: 3}
+  firingPosition: {fileID: 827562231}
+  health: 10
+  muzzleFlashVFX: {fileID: 3782737428090705020}
+  canShoot: 0
+  money: {fileID: 881212847661550423, guid: b68feb2d46c4e8147a1d4fc7fa75b24e, type: 3}
+  moneyTransform: {fileID: 1381241556329655416}
+  animator: {fileID: 3420911919893464155}
+  healthText: {fileID: 2893257201903718969}
 --- !u!65 &1573488619
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -680,27 +700,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.2024765, y: 12.965589, z: 4.058774}
   m_Center: {x: 0.14096384, y: 5.982821, z: 0.50373274}
---- !u!114 &5742668298434226522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2574067315312916756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceacc89d494e4148ab479b084cb7a9f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CanShoot: 0
-  bulletPrefab: {fileID: 6354095560807762723, guid: c5084f384eeb52043933a27c5730fcee, type: 3}
-  firingPosition: {fileID: 827562231}
-  health: 2
-  muzzleFlashVFX: {fileID: 3782737428090705020}
-  money: {fileID: 881212847661550423, guid: b68feb2d46c4e8147a1d4fc7fa75b24e, type: 3}
-  moneyTransform: {fileID: 1381241556329655416}
-  healthText: {fileID: 2893257201903718969}
-  animator: {fileID: 3420911919893464155}
 --- !u!1 &2842873989579533386
 GameObject:
   m_ObjectHideFlags: 0

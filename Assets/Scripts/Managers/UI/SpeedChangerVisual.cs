@@ -24,9 +24,14 @@ namespace Managers.UI
 
         #endregion
 
-        private void Start()
+        private void Awake()
         {
             material = GetComponent<Renderer>().material;
+
+        }
+
+        private void Start()
+        {
 
         }
 

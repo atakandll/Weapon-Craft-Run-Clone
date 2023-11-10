@@ -249,8 +249,8 @@ GameObject:
   - component: {fileID: 64115445482999713}
   - component: {fileID: 3984580923947368452}
   - component: {fileID: 1200460491265062094}
+  - component: {fileID: 8752022936330288412}
   - component: {fileID: 1112958151}
-  - component: {fileID: 9122076649861609479}
   m_Layer: 0
   m_Name: gate
   m_TagString: Gate
@@ -325,6 +325,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8752022936330288412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839947739890521371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd012edecc96f34f9a3a1434f6934f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positiveValue: 4
+  negativeValue: -4
+  gateValue: 0
+  isGateActive: 0
+  boxCollider: {fileID: 1112958151}
+  redPrimaryMaterial: {fileID: 2100000, guid: 00e00c00837acb34685fe7e0780acefd, type: 2}
+  greenPrimaryMaterial: {fileID: 2100000, guid: 0e755036b67bfbf46923f1a601a3fec5, type: 2}
+  greenSecondaryMat: {fileID: 2100000, guid: 99e85e4df2c4d074ba8d4d473a206bf0, type: 2}
+  redSecondaryMat: {fileID: 2100000, guid: c77df578358274d4dafe305738c84b8f, type: 2}
+  gateOperatorText: {fileID: 7296290700847357944}
+  gateValueText: {fileID: 4980762006714516165}
+  originalScale: {x: 0, y: 0, z: 0}
+  hitEffectScale: {x: 20, y: 220, z: 300}
+  hitEffectDur: 0.15
+  damageText: {fileID: 4406716360936583249}
 --- !u!65 &1112958151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -338,33 +365,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.034596436, y: 0.030514328, z: 0.019999998}
   m_Center: {x: -0.0002841405, y: 0, z: 0}
---- !u!114 &9122076649861609479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839947739890521371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e107d6d86049738b020d0d483e3da6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGateActive: 0
-  boxCollider: {fileID: 1112958151}
-  positiveValues: 4
-  negativeValues: -4
-  gateValue: 0
-  redPrimaryMaterial: {fileID: 2100000, guid: 00e00c00837acb34685fe7e0780acefd, type: 2}
-  greenPrimaryMaterial: {fileID: 2100000, guid: 0e755036b67bfbf46923f1a601a3fec5, type: 2}
-  greenSecondaryMat: {fileID: 2100000, guid: 99e85e4df2c4d074ba8d4d473a206bf0, type: 2}
-  redSecondaryMat: {fileID: 2100000, guid: c77df578358274d4dafe305738c84b8f, type: 2}
-  gateOperatorText: {fileID: 7296290700847357944}
-  gateValueText: {fileID: 4980762006714516165}
-  originalScale: {x: 0, y: 0, z: 0}
-  hitEffectScale: {x: 20, y: 220, z: 220}
-  hitEffectDur: 0
-  damageText: {fileID: 4406716360936583249}
 --- !u!1 &5971812925770253422
 GameObject:
   m_ObjectHideFlags: 0
