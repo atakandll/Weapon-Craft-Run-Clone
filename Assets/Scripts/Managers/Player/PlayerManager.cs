@@ -4,6 +4,7 @@ using Managers.Game;
 using Managers.Gates;
 using Managers.Magazine;
 using Managers.Obstacles;
+using Managers.SaveSystem;
 using Managers.UI;
 using Managers.Upgrades;
 using Managers.Weapon;
@@ -354,6 +355,26 @@ namespace Managers.Player
         public void UpdatePlayersDamage()
         {
             CurrentPlayerDamage = playerDamage + currentWeapon.GetComponent<WeaponManager>().damage;
+        }
+        public void SavePlayerData()
+        {
+            SaveManager.SavePlayerData(this);
+        }
+    
+        public void LoadPlayerData()
+        {
+            SaveManager.LoadPlayerData();
+            PlayerData data = SaveManager.LoadPlayerData();
+
+            if(data != null)
+            {
+                CurrentLevelIndex = data.level;
+                FireRateValueIndex = data.fireRateValueIndex;
+                InitYearValueIndex = data.initYearValueIndex;
+                IncomeValueIndex = data.incomeValueIndex;
+                Money = data.money;
+                FireRangeValueIndex = data.fireRangeValueIndex;
+            }
         }
 
         private void SetMovementSpeed(float newMoveSpeed)

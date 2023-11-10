@@ -73,16 +73,15 @@ namespace Managers.Upgrades
                 IncomeValues.Add(nextValue);
             }
         }
-        private void SetInitYearValues()
+        public void SetInitYearValues()
         {
             int firstValue = initYearStartValue;
             InitYearValues.Add(firstValue);
 
-            for (int i = 1; i < 1000; i++)
+            for(int i = 1; i < 1000 ; i++)
             {
                 int valueNext = InitYearValues[i - 1] + initYearIncreasingValue;
                 InitYearValues.Add(valueNext);
-
             }
         }
         private void SetFireRateValues()

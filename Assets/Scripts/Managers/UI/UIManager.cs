@@ -211,6 +211,8 @@ namespace Managers.UI
                 
                 PlayerManager.Instance.SetUpgradedValues();
                 UpdateMoneyText();
+                PlayerManager.Instance.SavePlayerData();
+
                 
             }
         }
@@ -228,6 +230,8 @@ namespace Managers.UI
                 
                 PlayerManager.Instance.SetUpgradedValues();
                 UpdateMoneyText();
+                PlayerManager.Instance.SavePlayerData();
+
                 
             }
         }
@@ -247,6 +251,8 @@ namespace Managers.UI
                 UpdateMoneyText();
                 PlayerManager.Instance.SetUpgradedValues();
                 UpdateInitYearText();
+                PlayerManager.Instance.SavePlayerData();
+
             }
         }
 
@@ -263,6 +269,8 @@ namespace Managers.UI
                 
                 PlayerManager.Instance.SetUpgradedValues();
                 UpdateMoneyText();
+                PlayerManager.Instance.SavePlayerData();
+
                 
             }
             

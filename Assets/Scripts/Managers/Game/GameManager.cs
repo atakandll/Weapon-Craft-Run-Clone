@@ -123,6 +123,7 @@ namespace Managers.Game
         public void LoadNextScene()
         {
             PlayerManager.Instance.CurrentLevelIndex++;
+            PlayerManager.Instance.SavePlayerData();
             SceneManager.LoadScene(0);
         }
 
