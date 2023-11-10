@@ -46,99 +46,101 @@ namespace Managers.Magazine
 
         #endregion
 
-        public void MagazineShot()
+         public void MagazineShot()
+    {
+        bulletsInClip[numOfBulletsInClip].SetActive(true);
+        loadVFX.transform.position = vfxPlayTransforms[numOfBulletsInClip].transform.position;
+        loadVFX.Play();
+        transform.DORotate(rotationValues[numOfBulletsInClip],rotationDuration,RotateMode.Fast);
+       
+        numOfBulletsInClip +=1;
+
+        if(numOfBulletsInClip >= capacity)
         {
-            bulletsInClip[numOfBulletsInClip].SetActive(true);
-            loadVFX.transform.position = vfxPlayTransforms[numOfBulletsInClip].transform.position;
-            loadVFX.Play();
-            transform.DORotate(rotationValues[numOfBulletsInClip], rotationDuration, RotateMode.Fast);
-
-            numOfBulletsInClip += 1;
-
-            if (numOfBulletsInClip >= capacity)
-            {
-                MoveTowardsLeftPlatform();
-            }
-
+            MoveTowardsLeftPlatform();
         }
 
-        private void Update()
+    }
+    private void Update() 
+    { 
+        if( isMovingLeftPlatform && tag == "MovingToLeftPlatformMagazine")
         {
-            if (isMovingLeftPlatform && tag == "MovingToLeftPlatformMagazine")
-            {
-                playerDetector.SetActive(false);
-                playerCollider.SetActive(false);
-                transform.position = new Vector3(transform.position.x - moveSpeedNextGate * Time.deltaTime,
-                    transform.position.y, transform.position.z);
-            }
+            playerDetector.SetActive(false);
+            playerCollider.SetActive(false);
+            transform.position = new Vector3(transform.position.x- moveSpeedNextGate * Time.deltaTime, 
+                transform.position.y, transform.position.z);
         }
+    }
+    
+    private void OnTriggerEnter(Collider other) 
+    {
+        if(other.CompareTag("LeftPlatform") && tag == "MovingToLeftPlatformMagazine")
+        {
+            MoveTowardsNextGate(other);
+        }
+        if (other.CompareTag("SlidingGate") && tag == "MovingToNextGateMagazine")
+        {
+            SlidingGateInteraction(other);
+        }
+    }
 
-        private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other) 
+    {
+        if(other.CompareTag("LeftPlatform") && tag == "MovingToNextGateMagazine")
         {
-            if (other.CompareTag("LeftPlatform") && tag == "MovingToLeftPlatformMagazine")
-            {
-                MoveTowardsNextGate(other);
-            }
+            MoveTowardsNextGate(other);
+        }
+    }
 
-            if (other.CompareTag("SlidingGate") && tag == "MovingToLeftPlatformMagazine")
-            {
-                SlidingGateInteraction(other);
-            }
-        }
-        private void OnTriggerStay(Collider other) 
-        {
-            if(other.CompareTag("LeftPlatform") && tag == "MovingToNextGateMagazine")
-            {
-                MoveTowardsNextGate(other);
-            }
-        }
-        private void MoveTowardsNextGate(Collider other)
-        {
+    private void MoveTowardsNextGate(Collider other)
+    {
         
-            isMovingLeftPlatform = false;
+        isMovingLeftPlatform = false;
 
-            tag = "MovingToNextGateMagazine";
-            transform.position = new Vector3(other.transform.position.x, 
+        tag = "MovingToNextGateMagazine";
+        transform.position = new Vector3(other.transform.position.x, 
                 transform.position.y, transform.position.z + moveSpeedNextGate * Time.deltaTime);
 
-        }
-        public void MoveTowardsLeftPlatform()
+    }
+
+    public void MoveTowardsLeftPlatform()
+    {
+        tag = "MovingToLeftPlatformMagazine";
+        isMovingLeftPlatform = true;
+    }
+
+    private void SlidingGateInteraction(Collider other)
+    {
+        tag = "Magazine";
+        isMovingLeftPlatform = false;
+        Vector3 positionToMove = other.GetComponent<SlidingGates>().BucketTransform.position;
+        transform.DOMove(positionToMove, slidingGateDOMoveDur);
+        transform.DORotate(slidingGatePosRot,slidingGateDOMoveDur).OnComplete(UnloadMagazine);
+        for (int i = 0; i < bulletsInClip.Count; i++)
         {
-            tag = "MovingToLeftPlatformMagazine";
-            isMovingLeftPlatform = true;
+            if(!bulletsInClip[i].activeSelf) break;
+            other.GetComponent<SlidingGates>().BulletsInBucket.Add(bulletsInClip[i]);
         }
-        private void SlidingGateInteraction(Collider other)
-        {
-            tag = "Magazine";
-            isMovingLeftPlatform = false;
-            Vector3 positionToMove = other.GetComponent<SlidingGates>().BucketTransform.position;
-            transform.DOMove(positionToMove, slidingGateDOMoveDur);
-            transform.DORotate(slidingGatePosRot,slidingGateDOMoveDur).OnComplete(UnloadMagazine);
-            for (int i = 0; i < bulletsInClip.Count; i++)
-            {
-                if(!bulletsInClip[i].activeSelf) break;
-                other.GetComponent<SlidingGates>().BulletsInBucket.Add(bulletsInClip[i]);
-            }
         
-            other.GetComponent<SlidingGates>().EqualizeLists();
-        }
+        other.GetComponent<SlidingGates>().EqualizeLists();
+    }
 
-        private void UnloadMagazine()
+    private void UnloadMagazine()
+    {
+        for (int i = 0; i < bulletsInClip.Count; i++)
         {
-            for (int i = 0; i < bulletsInClip.Count; i++)
-            {
-                if(!bulletsInClip[i].activeSelf) break;
-                bulletsInClip[i].transform.parent = null;
-                bulletsInClip[i].GetComponent<Rigidbody>().useGravity = true;
-                bulletsInClip[i].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            }
-            clip.SetActive(false);
+            if(!bulletsInClip[i].activeSelf) break;
+            bulletsInClip[i].transform.parent = null;
+            bulletsInClip[i].GetComponent<Rigidbody>().useGravity = true;
+            bulletsInClip[i].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         }
+        clip.SetActive(false);
+    }
 
-        public void MagazineTravel()
-        {
-            transform.DOMove(travelPos.position,GameManager.Instance.MagazineTravelDuration).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
-        }
+    public void MagazineTravel()
+    {
+        transform.DOMove(travelPos.position,GameManager.Instance.MagazineTravelDuration).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
+    }
         
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Managers.UI
 {
@@ -22,6 +23,12 @@ namespace Managers.UI
         #endregion
 
         #endregion
+
+        private void Start()
+        {
+            material = GetComponent<Renderer>().material;
+
+        }
 
         private void Update()
         {

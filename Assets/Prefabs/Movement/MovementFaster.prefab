@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2609154138092012047}
   - component: {fileID: 2609154138092012040}
   - component: {fileID: 2609154138092012041}
-  - component: {fileID: 2609154138092012042}
+  - component: {fileID: 854174071598322863}
   m_Layer: 0
   m_Name: MovementFaster
   m_TagString: MovementFaster
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2609154138092012043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3941123, y: 0.26840243, z: 9.457226}
+  m_LocalScale: {x: 4.328111, y: 0.34669542, z: 12.2158985}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 9.318929, z: 1}
   m_Center: {x: 0, y: 4.1594644, z: 0}
---- !u!114 &2609154138092012042
+--- !u!114 &854174071598322863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2609154138092012043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eb3cdefdaa670e40994d66b4b2b0501, type: 3}
+  m_Script: {fileID: 11500000, guid: 3439c94dc097461db59ae6b3860d313d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: b3a77409f02e7734b9785588fe2e3610, type: 2}
+  material: {fileID: 0}

@@ -69,30 +69,32 @@ namespace Managers.Game
         {
             UpdatePlayerDamage();
             LevelChooser();
-            EndSniper = GameObject.FindGameObjectWithTag("EndSniper");
+            EndSniper = GameObject.FindGameObjectWithTag("EndSnip");
             camStartingPos = MainCam.transform.localPosition;
         }
 
-        private void Update()
+        private void Update() 
         {
             EndSniper.transform.Rotate(RotationSpeed * Time.deltaTime);
-            
+        
+            if(Input.GetKeyDown(KeyCode.S))
+            {
+                PlayerManager.Instance.SavePlayerData();
+            } 
         }
 
         public void LevelChooser()
         {
-            if (PlayerManager.Instance.CurrentLevelIndex <= NumOfPresetLevels)
+            if(PlayerManager.Instance.CurrentLevelIndex <= NumOfPresetLevels)
             {
-                Instantiate(Levels[PlayerManager.Instance.CurrentLevelIndex], LevelSpawnTransform.position,
-                    Quaternion.identity);
+                Instantiate(Levels[PlayerManager.Instance.CurrentLevelIndex],LevelSpawnTransform.position,Quaternion.identity);
             }
             else
             {
-                int levelRand = Random.Range(0, Levels.Count);
-                Instantiate(Levels[levelRand], LevelSpawnTransform.position, Quaternion.identity);
+                int levelRand = Random.Range(0,Levels.Count);
+                Instantiate(Levels[levelRand],LevelSpawnTransform.position,Quaternion.identity);
             }
         }
-
         public void UpdatePlayerDamage()
         {
             playerDamage = PlayerManager.Instance.CurrentPlayerDamage;
@@ -103,13 +105,13 @@ namespace Managers.Game
             GameHasEnded = true;
             PlayerManager.Instance.PlayerDeath();
             UIManager.Instance.FinishHud();
-            
         }
-
+    
         public void CameraStateChange()
         {
-            if (StartingCam.activeSelf)
+            if(StartingCam.activeSelf)
             {
+
                 MainCam.GetComponent<CinemachineBrain>().m_UpdateMethod = CinemachineBrain.UpdateMethod.SmartUpdate;
                 StartingCam.SetActive(false);
             }
@@ -117,9 +119,11 @@ namespace Managers.Game
             {
                 MainCam.GetComponent<CinemachineBrain>().m_UpdateMethod = CinemachineBrain.UpdateMethod.SmartUpdate;
                 StartingCam.SetActive(true);
-            }
+            }   
+        
         }
 
+   
         public void LoadNextScene()
         {
             PlayerManager.Instance.CurrentLevelIndex++;

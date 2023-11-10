@@ -5,7 +5,7 @@ namespace Managers.Magazine
     public class MagazinePlayerDetector : MonoBehaviour
     {
         
-        [SerializeField] GameObject relatedMagazine;
+        [SerializeField] private GameObject relatedMagazine;
 
         private void Start() 
         {

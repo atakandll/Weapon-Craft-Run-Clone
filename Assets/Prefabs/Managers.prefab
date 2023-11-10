@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7344080168404744903}
-  - component: {fileID: 2580460007521370549}
+  - component: {fileID: 8353534941438643252}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 7344080169786498826}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2580460007521370549
+--- !u!114 &8353534941438643252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,19 +47,20 @@ MonoBehaviour:
   startingHud: {fileID: 0}
   startButton: {fileID: 0}
   fireRateButton: {fileID: 0}
-  initYearButton: {fileID: 0}
+  inityearButton: {fileID: 0}
   fingerImage: {fileID: 0}
-  leftRightMovement: 60
-  animTime: 1.5
+  leftRightMovement: 0
+  animTime: 0
   slidingUI: {fileID: 0}
-  moveValue: 90
+  moveValue: 0
   gameHud: {fileID: 0}
-  initYearNumber: {fileID: 0}
   currentLevelText: {fileID: 0}
+  initYearNumber: {fileID: 0}
   playerMoneyText: {fileID: 0}
+  playerStarsText: {fileID: 0}
   reducerText: {fileID: 0}
-  reducerMoveValue: 0.5
-  reducerMoveDur: 0.5
+  reducerMoveValue: 0
+  reducerMoveDur: 0
   reducerTextResetPos: {x: 0, y: 0}
   endHud: {fileID: 0}
   initYearImage: {fileID: 0}
@@ -73,23 +74,8 @@ MonoBehaviour:
   initYearCostText: {fileID: 0}
   weaponSlider: {fileID: 0}
   fillImage: {fileID: 0}
-  blackAndWhiteImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  coloredImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  blackandWhiteImages: []
+  coloredImages: []
 --- !u!1 &7344080168691760979
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +195,7 @@ MonoBehaviour:
   Levels:
   - {fileID: 1164200669940014309, guid: 2223b2d54ce8f8d4ba655323f27d5de0, type: 3}
   - {fileID: 9077923785288634265, guid: 855e70408a276d14d935e9cbc192f389, type: 3}
-  - {fileID: 4839722392771844536, guid: 2704ddf4a5a3dcd43a956f54b588fa30, type: 3}
+  - {fileID: 0}
   NumOfPresetLevels: 3
   LevelSpawnTransform: {fileID: 0}
 --- !u!1 &7344080169786498827

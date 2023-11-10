@@ -37,6 +37,8 @@ TagManager:
   - BrickWall
   - Stickman
   - StickmansPlayerDetector
+  - coin
+  - TouchedStickman
   layers:
   - Default
   - TransparentFX

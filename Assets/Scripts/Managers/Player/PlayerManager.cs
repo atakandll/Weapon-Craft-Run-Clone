@@ -112,6 +112,10 @@ namespace Managers.Player
             currentWeapon = GameObject.FindGameObjectWithTag("Weapon");
             tag = "Player";
 
+            LoadPlayerData();
+            SetUpgradedValues();
+            UpdatePlayersDamage();
+
             originalMoveSpeed = forwardMoveSpeed;
             
 
@@ -181,87 +185,91 @@ namespace Managers.Player
             return position;
         }
 
-        private void OnTriggerEnter(Collider other)
+         private void OnTriggerEnter(Collider other) 
+    {
+        if(other.CompareTag("MovementSlower"))
         {
-            if (other.CompareTag("MovementSlower"))
-            {
-                SetMovementSpeed(slowMovSpeed);
-            }
-            else if (other.CompareTag("MovementFaster"))
-            {
-                SetMovementSpeed(fastMovSpeed);
-            }
-            else if (other.CompareTag("Obstacle"))
-            {
-                KnockbackPlayer();
-                other.tag = "Untagged";
-            }
-            else if (other.CompareTag("Enemy"))
-            {
-                KnockbackPlayer();
-                other.tag = "TouchedEnemy";
-            }
-            else if (other.CompareTag("EnemyPlayerDetector"))
-            {
-                other.GetComponent<EnemyManager>().CanShoot = true;
-            }
-            else if (other.CompareTag("Chest"))
-            {
-                GameManager.Instance.EndLevel();
-            }
-            else if (other.CompareTag("MagazinesPlayerCollider"))
-            {
-                other.transform.parent.GetComponent<MagazineManager>().MoveTowardsLeftPlatform();
-            }
-            else if (other.CompareTag("Money"))
-            {
-                IncrementMoney(other.GetComponent<Money>().value);
-                Destroy(other.gameObject);
-            }
-            else if (other.CompareTag("FirstSlidingGateCollider"))
-            {
-                IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().FirstLoadInitYear);
-
-                other.transform.parent.parent.GetComponent<SlidingGates>()
-                    .PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().BulletsinFirstLoad);
-
-                other.transform.parent.parent.GetComponent<SlidingGates>().LockAllGates();
-            }
-            else if(other.CompareTag("SecondSlidingGateCol"))
-            {
-                IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().SecondLoadInitYear);
-
-                other.transform.parent.parent.GetComponent<SlidingGates>().
-                    PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().BulletinSecondLoad);
-
-                other.transform.parent.parent.GetComponent<SlidingGates>().LockAllGates();
-            }
-            else if(other.CompareTag("ThirdSlidingGateCol"))
-            {
-                IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().ThirdLoadInitYear);
-
-                other.transform.parent.parent.GetComponent<SlidingGates>().
-                    PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().BulletsinThirdLoad);
-
-                other.transform.parent.parent.GetComponent<SlidingGates>().LockAllGates();
-            }
-            else if (other.CompareTag("FinishLine"))
-            {
-                GameManager.Instance.CameraStateChange();
-            }
-           
+            SetMovementSpeed(slowMovSpeed);
         }
-        private void OnTriggerExit(Collider other) 
+        else if(other.CompareTag("MovementFaster"))
         {
-            if(other.CompareTag("MovementSlower"))
-            {
-                SetMovementSpeed(originalMoveSpeed);
-            }
-            else if(other.CompareTag("MovementFaster"))
-            {
-                SetMovementSpeed(originalMoveSpeed);
-            }
+            SetMovementSpeed(fastMovSpeed);
         }
+        else if(other.CompareTag("Obstacle"))   
+        {
+            PlayerManager.Instance.KnockbackPlayer();
+            other.tag = "Untagged";
+        }
+        else if(other.CompareTag("Stickman"))   
+        {
+            PlayerManager.Instance.KnockbackPlayer();
+            other.tag = "TouchedStickman";
+        }
+        
+        else if(other.CompareTag("StickmansPlayerDetector"))
+        {
+            other.transform.parent.GetComponent<EnemyManager>().CanShoot = true;
+        }
+        else if(other.CompareTag("EndingObstacle"))
+        {
+            GameManager.Instance.EndLevel();
+        }
+        else if(other.CompareTag("MagazinesPlayerCol"))
+        {
+            other.transform.parent.GetComponent<MagazineManager>().MoveTowardsLeftPlatform();
+        }
+        else if(other.CompareTag("Money"))
+        {
+            IncrementMoney(other.GetComponent<Money>().value);
+            Destroy(other.gameObject);
+        }
+        else if(other.CompareTag("FirstSlidingGateCol"))
+        {
+            IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().FirstLoadInitYear);
+            
+            other.transform.parent.parent.GetComponent<SlidingGates>().
+                PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().BulletsinFirstLoad);
+
+            other.transform.parent.parent.GetComponent<SlidingGates>().LockAllGates();
+        }
+        else if(other.CompareTag("SecondSlidingGateCol"))
+        {
+            IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().SecondLoadInitYear);
+
+            other.transform.parent.parent.GetComponent<SlidingGates>().
+                PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().BulletinSecondLoad);
+
+            other.transform.parent.parent.GetComponent<SlidingGates>().LockAllGates();
+        }
+        else if(other.CompareTag("ThirdSlidingGateCol"))
+        {
+            IncrementInGameInitYear(other.transform.parent.parent.GetComponent<SlidingGates>().ThirdLoadInitYear);
+
+            other.transform.parent.parent.GetComponent<SlidingGates>().
+                PlayLoadingAnim(other.transform.parent.parent.GetComponent<SlidingGates>().BulletsinThirdLoad);
+
+            other.transform.parent.parent.GetComponent<SlidingGates>().LockAllGates();
+        }
+        else if(other.CompareTag("FinishLine"))
+        {
+            GameManager.Instance.CameraStateChange();
+        }
+        else if(other.CompareTag("Chain"))
+        {
+            KnockbackPlayer();
+        }
+    }
+         private void OnTriggerExit(Collider other) 
+         {
+             if(other.CompareTag("MovementSlower"))
+             {
+                 SetMovementSpeed(originalMoveSpeed);
+             }
+             else if(other.CompareTag("MovementFaster"))
+             {
+                 SetMovementSpeed(originalMoveSpeed);
+             }
+         }
       
 
         private void WeaponSelector()
@@ -347,9 +355,9 @@ namespace Managers.Player
         public void PlayerDeath()
         {
             DOTween.Clear(currentWeapon.gameObject);
-            currentWeapon.transform.DORotate(deathEndValue,deathDur,RotateMode.Fast);
-            _boxCollider.isTrigger = false;
-            _rigidbody.useGravity = true;
+            currentWeapon.transform.DORotate(deathEndValue, deathDur,RotateMode.Fast);
+            GetComponent<BoxCollider>().isTrigger = false;
+            GetComponent<Rigidbody>().useGravity = true;
         }
 
         public void UpdatePlayersDamage()
