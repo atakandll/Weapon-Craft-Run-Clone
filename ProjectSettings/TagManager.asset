@@ -3,7 +3,40 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - MovementSlower
+  - Obstacle
+  - MovementFaster
+  - Enemy
+  - TouchedEnemy
+  - EnemyPlayerDetector
+  - Chest
+  - MagazinesPlayerCollider
+  - Money
+  - FirstSlidingGateCollider
+  - SecondSlidingGateCol
+  - ThirdSlidingGateCol
+  - FinishLine
+  - MovingToLeftPlatformMagazine
+  - LeftPlatform
+  - SlidingGate
+  - MovingToNextGateMagazine
+  - Magazine
+  - Weapon
+  - GateManager
+  - Bullet
+  - Gate
+  - EndSniper
+  - MagazinePlayerDetector
+  - EndingObstacle
+  - Chain
+  - MagazinesPlayerDetector
+  - MagazinesPlayerCol
+  - FirstSlidingGateCol
+  - EndSnip
+  - BrickWall
+  - Stickman
+  - StickmansPlayerDetector
   layers:
   - Default
   - TransparentFX
@@ -11,11 +44,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - PlayerDetector
+  - BulletsInClip
+  - OnlyPlayer
+  - Bullet
   - 
   - 
   - 
