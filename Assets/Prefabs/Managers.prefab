@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5054385360178144798}
-  - component: {fileID: 5054385360178144799}
+  - component: {fileID: 580375995493554142}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -66,7 +66,7 @@ Transform:
   m_Father: {fileID: 5054385359441665720}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5054385360178144799
+--- !u!114 &580375995493554142
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,32 +75,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 5054385360178144796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c140b8d63a34f4ca7e950e58292891, type: 3}
+  m_Script: {fileID: 11500000, guid: 3abea128c7a447c99881b46e9d2a62d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameHasEnded: 0
-  gameHasStarted: 0
+  GameHasEnded: 0
+  GameHasStarted: 0
   playerDamage: 2.5
-  stickmanFireRate: 1
-  stickmanFireRange: 10
-  numOfBulletsInLoad: 15
-  mainCam: {fileID: 0}
-  startingCam: {fileID: 0}
-  endSniper: {fileID: 0}
-  rotationSpeed: {x: 0, y: 50, z: 0}
-  magazineTravelDur: 1
-  levels:
+  EnemyFireRate: 1
+  EnemyFireRange: 10
+  NumOfBulletsInLoad: 15
+  MainCam: {fileID: 0}
+  StartingCam: {fileID: 0}
+  EndSniper: {fileID: 0}
+  RotationSpeed: {x: 0, y: 50, z: 0}
+  MagazineTravelDuration: 1
+  Levels:
   - {fileID: 1164200669940014309, guid: 2223b2d54ce8f8d4ba655323f27d5de0, type: 3}
   - {fileID: 9077923785288634265, guid: 855e70408a276d14d935e9cbc192f389, type: 3}
   - {fileID: 4839722392771844536, guid: 2704ddf4a5a3dcd43a956f54b588fa30, type: 3}
-  - {fileID: 3218555650486617102, guid: 337461935b4c83146a478cf8d426731b, type: 3}
-  - {fileID: 4351759044271879948, guid: 9ff4486f90d1a7642943b30e729c42af, type: 3}
-  - {fileID: 8671937998334776759, guid: 65e174655e6fd1243ba344a20a5c7932, type: 3}
-  - {fileID: 739956098745809815, guid: 8ab38f44903bc1240adb715af5b6a142, type: 3}
-  - {fileID: 8578911668281815889, guid: d7550a410c2f37047b3ed7bab2ba6ab0, type: 3}
-  - {fileID: 8582978122854108232, guid: b74e15ebf5dc4d44da6acb362ca47c77, type: 3}
-  numOfPresetLevels: 9
-  levelSpawnTransform: {fileID: 0}
+  NumOfPresetLevels: 3
+  LevelSpawnTransform: {fileID: 0}
 --- !u!1 &5054385360486088417
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5054385360486088416}
-  - component: {fileID: 5054385360486088419}
+  - component: {fileID: 6284591096960128785}
   m_Layer: 0
   m_Name: UpgradeManager
   m_TagString: Untagged
@@ -133,7 +127,7 @@ Transform:
   m_Father: {fileID: 5054385359441665720}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5054385360486088419
+--- !u!114 &6284591096960128785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,26 +136,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 5054385360486088417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14499cc588c1e854a87ffa7577079862, type: 3}
+  m_Script: {fileID: 11500000, guid: 47b63c4c01594617ab6b9db59f32092d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  incomeValues: []
+  IncomeValues: []
+  InitYearValues: 
+  FireRateValues: []
+  FireRangeValues: []
+  Costs: 
   incomeStartValue: 1
-  incomeIncreasingValue: 1
-  initYearValues: 
-  initYearStartValue: 1
+  incomeIncreasingValue: 0.2
+  initYearStartValue: 1700
   initYearIncreasingValue: 1
-  fireRateValues: []
-  fireRateStartValue: 1
-  fireRateIncreasingValue: 1
-  secondFireRateIncreasingValue: 1
-  fireRateChangeLevelIndex: 1
-  fireRangeValues: []
-  fireRangeStartValue: 1
+  fireRateStartValue: 0.6
+  fireRateIncreasingValue: 0.03
+  secondFireRateIncreasingValue: 0.01
+  fireRateChangeLevelIndex: 5
+  fireRangeStartValue: 18
   fireRangeIncreasingValue: 1
-  costs: 
-  costStartingValue: 1
-  costIncreasingValue: 0
+  costStartingValue: 100
+  costIncrasingValue: 100
 --- !u!1 &5054385360971807610
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5054385360971807605}
-  - component: {fileID: 5054385360971807604}
+  - component: {fileID: 2439355963960647281}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -194,7 +188,7 @@ Transform:
   m_Father: {fileID: 5054385359441665720}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5054385360971807604
+--- !u!114 &2439355963960647281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,7 +197,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5054385360971807610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53606429aa19b764cbc45466e4cdf702, type: 3}
+  m_Script: {fileID: 11500000, guid: 2107a05e6aec4aa890616d89596e6cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startingHud: {fileID: 0}
@@ -219,7 +213,6 @@ MonoBehaviour:
   currentLevelText: {fileID: 0}
   initYearNumber: {fileID: 0}
   playerMoneyText: {fileID: 0}
-  playerStarsText: {fileID: 0}
   reducerText: {fileID: 0}
   reducerMoveValue: 0.5
   reducerMoveDur: 0.5

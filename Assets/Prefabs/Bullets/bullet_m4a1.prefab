@@ -175,9 +175,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8373607429620061677}
-  - component: {fileID: 897045982483873759}
   - component: {fileID: 3664747890229942416}
   - component: {fileID: 8912302903936732622}
+  - component: {fileID: 5518920964271730880}
   m_Layer: 11
   m_Name: bullet_m4a1
   m_TagString: Bullet
@@ -202,24 +202,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &897045982483873759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9187016938581331799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e5fdc3064fbd948855ab2cb045a5f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firedPoint: {fileID: 0}
-  moveSpeed: 25
-  relatedWeapon: {fileID: 0}
-  stickmansBullet: 0
-  rotationValue: {x: 90, y: 0, z: 0}
-  hitEffect: {fileID: 2955623459812423943, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}
 --- !u!54 &3664747890229942416
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -249,3 +231,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 5.2779093, z: 1}
   m_Center: {x: 0, y: -0.111820295, z: -1.3139364e-15}
+--- !u!114 &5518920964271730880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9187016938581331799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df47a7081364bb8b5cd618a430b9248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firedPoint: {fileID: 0}
+  hasHit: 0
+  enemyBullet: 0
+  moveSpeed: 25
+  relatedWeapon: {fileID: 0}
+  rotationValue: {x: 0, y: 0, z: 0}
+  hitEffect: {fileID: 2955623459812423943, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}

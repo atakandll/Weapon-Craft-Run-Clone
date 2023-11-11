@@ -40,10 +40,11 @@ namespace Managers.Weapon
         #endregion
         
 
-        private void Start()
-        {
+        private void Start() 
+        {   
             tag = "Weapon";
         }
+
         private void ResetPos()
         {
             transform.DORotate(originalRotationValue,resetRotationDelay,RotateMode.Fast);
@@ -76,7 +77,7 @@ namespace Managers.Weapon
             
 
             GameObject firedBullet = Instantiate(bulletPrefab, weaponType.position ,Quaternion.identity);
-
+        
             firedBullet.GetComponent<BulletManager>().firedPoint = weaponType;
             firedBullet.GetComponent<BulletManager>().SetRelatedWeapon(gameObject);
             StartCoroutine(MuzzleFlashoff());

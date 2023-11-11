@@ -9626,10 +9626,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5446128190076164315}
-  - component: {fileID: 7075118458236029197}
+  - component: {fileID: 7355011090033202382}
+  - component: {fileID: -3729065453261579101}
   m_Layer: 0
   m_Name: CollectCoin
-  m_TagString: coin
+  m_TagString: Money
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9651,19 +9652,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &7075118458236029197
-SphereCollider:
+--- !u!114 &7355011090033202382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053562336145227528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f71bd233df64e41ad604ec47789196b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 50
+--- !u!65 &-3729065453261579101
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5053562336145227528}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.42927152
-  m_Center: {x: 0, y: 1.088522e-17, z: -0.020728469}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5079950962883344708
 GameObject:
   m_ObjectHideFlags: 0
@@ -9769,6 +9783,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7574568570027739294
 GameObject:
   m_ObjectHideFlags: 0

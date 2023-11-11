@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 9038820866086356656}
   - component: {fileID: 5395184970655877397}
   - component: {fileID: 7871020480556744159}
-  - component: {fileID: -4051883738262795041}
   - component: {fileID: -8257029663725254662}
   - component: {fileID: -4675143330374317215}
+  - component: {fileID: 4708056020321355494}
   m_Layer: 11
   m_Name: Bullet_Tec_9
   m_TagString: Bullet
@@ -87,24 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-4051883738262795041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8519551676674677770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e5fdc3064fbd948855ab2cb045a5f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firedPoint: {fileID: 0}
-  moveSpeed: 25
-  relatedWeapon: {fileID: 0}
-  stickmansBullet: 0
-  rotationValue: {x: 0, y: 0, z: 0}
-  hitEffect: {fileID: 2955623459812423943, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}
 --- !u!54 &-8257029663725254662
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -134,3 +116,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.019275568, y: 0.019275568, z: 0.05628649}
   m_Center: {x: -9.313226e-10, y: 0, z: 0.0022790171}
+--- !u!114 &4708056020321355494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8519551676674677770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df47a7081364bb8b5cd618a430b9248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firedPoint: {fileID: 0}
+  hasHit: 0
+  enemyBullet: 0
+  moveSpeed: 25
+  relatedWeapon: {fileID: 0}
+  rotationValue: {x: 0, y: 0, z: 0}
+  hitEffect: {fileID: 2955623459812423943, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}

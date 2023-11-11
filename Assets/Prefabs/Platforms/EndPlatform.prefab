@@ -325,6 +325,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057662327311 stripped
@@ -405,6 +413,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -489,6 +505,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057628435836 stripped
@@ -571,6 +595,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057635569344 stripped
@@ -651,6 +683,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -735,6 +775,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057671394860 stripped
@@ -815,6 +863,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -899,6 +955,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057583325216 stripped
@@ -981,6 +1045,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057340053762 stripped
@@ -1061,6 +1133,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1145,6 +1225,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057412905071 stripped
@@ -1225,6 +1313,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1309,6 +1405,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342058206546734 stripped
@@ -1391,6 +1495,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342058174486762 stripped
@@ -1471,6 +1583,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1555,6 +1675,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342058255175656 stripped
@@ -1637,6 +1765,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342058050887215 stripped
@@ -1717,6 +1853,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1801,6 +1945,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342058137671704 stripped
@@ -1881,6 +2033,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1965,6 +2125,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057903033793 stripped
@@ -2047,6 +2215,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057999201742 stripped
@@ -2127,6 +2303,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2211,6 +2395,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057994307337 stripped
@@ -2293,6 +2485,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057792195422 stripped
@@ -2373,6 +2573,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2457,6 +2665,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057816807379 stripped
@@ -2474,18 +2690,6 @@ PrefabInstance:
     - target: {fileID: 508040917646705448, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 508040917646705448, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 12.973334
-      objectReference: {fileID: 0}
-    - target: {fileID: 508040917646705448, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.144706
-      objectReference: {fileID: 0}
-    - target: {fileID: 508040917646705448, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 155.67746
       objectReference: {fileID: 0}
     - target: {fileID: 508040917646705448, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2531,13 +2735,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndingObstacle
       objectReference: {fileID: 0}
-    - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: health
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
-      propertyPath: moneysValue
-      value: 55
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
@@ -2621,6 +2825,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342056437616107 stripped
@@ -2702,6 +2914,14 @@ PrefabInstance:
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
       value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
@@ -2785,6 +3005,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342056516653200 stripped
@@ -2866,6 +3094,14 @@ PrefabInstance:
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
       value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
@@ -2949,6 +3185,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342056487360721 stripped
@@ -3029,6 +3273,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3113,6 +3365,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342056265080578 stripped
@@ -3195,6 +3455,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342056262645598 stripped
@@ -3275,6 +3543,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3359,6 +3635,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342056340601328 stripped
@@ -3439,6 +3723,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3523,6 +3815,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342056190179941 stripped
@@ -3604,6 +3904,14 @@ PrefabInstance:
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
       value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
@@ -3687,6 +3995,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342056134741114 stripped
@@ -3769,6 +4085,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342056256824289 stripped
@@ -3849,6 +4173,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3933,6 +4265,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057079062080 stripped
@@ -4014,6 +4354,14 @@ PrefabInstance:
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
       value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
@@ -4097,6 +4445,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057154853001 stripped
@@ -4179,6 +4535,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342056992270559 stripped
@@ -4259,6 +4623,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4343,6 +4715,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342057011763327 stripped
@@ -4424,6 +4804,14 @@ PrefabInstance:
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
       value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
@@ -4507,6 +4895,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342056699146368 stripped
@@ -4587,6 +4983,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559084478564420115, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
       propertyPath: moneysValue
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
       value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4671,6 +5075,14 @@ PrefabInstance:
       propertyPath: moneysValue
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 881212847661550423, guid: 3edc8157b7e44c8419665eb82d01c99b, type: 3}
+    - target: {fileID: 8134495427131660312, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70207b457ef9f0498039369a582c1c1, type: 3}
 --- !u!4 &4207342056766988187 stripped
@@ -4685,6 +5097,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4426923856336755602}
     m_Modifications:
+    - target: {fileID: 1352339552199369971, guid: c35b785e991a16347a25ea9cb0312bba, type: 3}
+      propertyPath: m_TagString
+      value: EndSnip
+      objectReference: {fileID: 0}
     - target: {fileID: 8469203888112173571, guid: c35b785e991a16347a25ea9cb0312bba, type: 3}
       propertyPath: m_Name
       value: SniperTable
@@ -4707,15 +5123,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9134277218555975865, guid: c35b785e991a16347a25ea9cb0312bba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.011876425
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9134277218555975865, guid: c35b785e991a16347a25ea9cb0312bba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6123047
+      value: 4.44
       objectReference: {fileID: 0}
     - target: {fileID: 9134277218555975865, guid: c35b785e991a16347a25ea9cb0312bba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.64991224
+      value: 0.6389
       objectReference: {fileID: 0}
     - target: {fileID: 9134277218555975865, guid: c35b785e991a16347a25ea9cb0312bba, type: 3}
       propertyPath: m_LocalRotation.w

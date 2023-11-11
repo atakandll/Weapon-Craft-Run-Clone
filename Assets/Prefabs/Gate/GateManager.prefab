@@ -116,7 +116,8 @@ PrefabInstance:
       propertyPath: hitEffectScale.z
       value: 300
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8752022936330288412, guid: 86bf2235fadd5d84c8af1c1cdd5f8cf1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 86bf2235fadd5d84c8af1c1cdd5f8cf1, type: 3}
 --- !u!4 &2845279798320428260 stripped
 Transform:
@@ -236,7 +237,8 @@ PrefabInstance:
       propertyPath: whitePrimaryMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 4bbb068eaa50e204b921a1bfb6622ba5, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8752022936330288412, guid: 86bf2235fadd5d84c8af1c1cdd5f8cf1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 86bf2235fadd5d84c8af1c1cdd5f8cf1, type: 3}
 --- !u!4 &2845279798422947814 stripped
 Transform:

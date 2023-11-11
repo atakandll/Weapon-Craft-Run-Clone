@@ -40,7 +40,7 @@ namespace Managers.Obstacles
             UpdateHealthText();
             ObstacleHitEffect();
             
-            if(health <= 0)
+            if(health == 0)
             {
                 GameObject spawnedMoney = Instantiate(money,moneySpawnPosition.position,Quaternion.identity);
                 spawnedMoney.GetComponent<Money>().value = moneysValue;

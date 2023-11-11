@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1070247348025232362}
   - component: {fileID: 1070247348025232365}
   - component: {fileID: 1070247348025232364}
-  - component: {fileID: 1070247348025232360}
+  - component: {fileID: 8109467665790767166}
   m_Layer: 0
   m_Name: MovementSlower
   m_TagString: MovementSlower
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 9.318929, z: 1}
   m_Center: {x: 0, y: 4.1594644, z: 0}
---- !u!114 &1070247348025232360
+--- !u!114 &8109467665790767166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1070247348025232367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eb3cdefdaa670e40994d66b4b2b0501, type: 3}
+  m_Script: {fileID: 11500000, guid: 3439c94dc097461db59ae6b3860d313d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 0}
+  material: {fileID: 0}

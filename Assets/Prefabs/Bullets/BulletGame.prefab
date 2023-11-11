@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 6009377038553911705}
   - component: {fileID: 7262691044794965564}
   - component: {fileID: 4841004902819490550}
-  - component: {fileID: -1449372284781839654}
   - component: {fileID: 937935061014716675}
   - component: {fileID: 2351447008941281766}
+  - component: {fileID: 4260992430480860974}
   m_Layer: 11
-  m_Name: StickmanBullet
+  m_Name: BulletGame
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,24 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-1449372284781839654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6354095560807762723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e5fdc3064fbd948855ab2cb045a5f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firedPoint: {fileID: 0}
-  moveSpeed: 25
-  relatedWeapon: {fileID: 0}
-  stickmansBullet: 0
-  rotationValue: {x: 0, y: 0, z: 0}
-  hitEffect: {fileID: 2955623459812423943, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}
 --- !u!65 &937935061014716675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -133,3 +115,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &4260992430480860974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6354095560807762723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df47a7081364bb8b5cd618a430b9248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firedPoint: {fileID: 0}
+  hasHit: 0
+  enemyBullet: 0
+  moveSpeed: 25
+  relatedWeapon: {fileID: 0}
+  rotationValue: {x: 0, y: 0, z: 0}
+  hitEffect: {fileID: 2955623459812423943, guid: f5507a8c6a22c404ab324980c4e8a11b, type: 3}

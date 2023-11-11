@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1981999983}
   - component: {fileID: 1981999984}
   - component: {fileID: 765870533}
-  - component: {fileID: 1351506467}
+  - component: {fileID: 8736351315154933520}
   m_Layer: 10
   m_Name: PlayerDetector
   m_TagString: MagazinesPlayerDetector
@@ -63,7 +63,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1351506467
+--- !u!114 &8736351315154933520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1981999982}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e87f161c78d7c73438ee6d064a31fb20, type: 3}
+  m_Script: {fileID: 11500000, guid: 5530e360234940d98f319d09f66c984f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   relatedMagazine: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 968443515137296534}
   - component: {fileID: 790983457482698598}
   - component: {fileID: 790983457482698593}
-  - component: {fileID: 790983457482698595}
+  - component: {fileID: 1133604248263610855}
   m_Layer: 0
   m_Name: Magazine
   m_TagString: Magazine
@@ -251,7 +251,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 2}
   m_Center: {x: 0, y: 0.31, z: 0}
---- !u!114 &790983457482698595
+--- !u!114 &1133604248263610855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,17 +260,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 449034580431360556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e8e3e1cefde17f42a2057e8ac566173, type: 3}
+  m_Script: {fileID: 11500000, guid: ce5548979dfa4767826ae9197da04e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magazineCapacity: 6
+  canTravel: 0
+  travelPos: {fileID: 61774392634561587}
+  capacity: 6
   bulletsInClip:
+  - {fileID: 9105459835692035957}
   - {fileID: 8686080022298658703}
   - {fileID: 8566531344733262200}
   - {fileID: 3232143743923750503}
   - {fileID: 3045957901153253865}
   - {fileID: 3650463637181814600}
-  - {fileID: 9105459835692035957}
   vfxPlayTransforms:
   - {fileID: 3982056644835020644}
   - {fileID: 8868196071795689196}
@@ -285,15 +287,14 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 240}
   - {x: 0, y: 0, z: 300}
   - {x: 0, y: 0, z: 0}
-  rotationDur: 0.2
   loadVFX: {fileID: 2611980319876071333}
+  rotationDuration: 0.2
+  isRotating: 0
   moveSpeedNextGate: 40
   playerDetector: {fileID: 1981999982}
-  playerCol: {fileID: 410967952163079852}
+  playerCollider: {fileID: 410967952163079852}
   slidingGateDOMoveDur: 0.2
   slidingGatePosRot: {x: 270, y: 0, z: 0}
-  canTravel: 0
-  travelPos: {fileID: 61774392634561587}
   clip: {fileID: 4054093826061263229}
 --- !u!1 &989875563802736204
 GameObject:

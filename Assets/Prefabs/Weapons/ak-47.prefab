@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 975148109588094517}
   - component: {fileID: 4190519872983880080}
   - component: {fileID: 2144629138369783130}
-  - component: {fileID: 5436606593592838562}
-  m_Layer: 0
+  - component: {fileID: 1485560389734070857}
+  m_Layer: 6
   m_Name: ak-47
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5436606593592838562
+--- !u!114 &1485560389734070857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,18 +104,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 487440608417547407}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2db7f06c7f80334a88a9db00e8bb8a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 93b760ae5fc84ab9ba69af023f7adff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 9187016938581331799, guid: a7173abddc746294ab144ce5c45e7479, type: 3}
-  tipOfWeapon: {fileID: 1791871997774926069}
+  damage: 3
+  bulletPrefab: {fileID: 9187016938581331799, guid: a7173abddc746294ab144ce5c45e7479, type: 3}
+  weaponType: {fileID: 1791871997774926069}
   firedRotationDelay: 0.2
   resetRotationDelay: 0.5
   fireEndRotationValue: {x: 340, y: 0, z: 0}
   originalRotationValue: {x: 0, y: 0, z: 0}
-  fireRange: 12
-  fireRate: 0.2
-  damage: 1
+  fireRange: 4
+  fireRate: 0.26
   muzzleFlashVFX: {fileID: 4113485545312467268}
 --- !u!1 &6334280302423315292
 GameObject:
@@ -126,7 +126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1791871997774926069}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,6 +158,18 @@ PrefabInstance:
     - target: {fileID: 443295942137442804, guid: d121a6836a550bf4a869d37d3285bcca, type: 3}
       propertyPath: m_Name
       value: Hands
+      objectReference: {fileID: 0}
+    - target: {fileID: 443295942137442804, guid: d121a6836a550bf4a869d37d3285bcca, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 793349447179170299, guid: d121a6836a550bf4a869d37d3285bcca, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 965260170920129625, guid: d121a6836a550bf4a869d37d3285bcca, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 967490943383579470, guid: d121a6836a550bf4a869d37d3285bcca, type: 3}
       propertyPath: m_RootOrder
@@ -203,6 +215,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8591689208691504168, guid: d121a6836a550bf4a869d37d3285bcca, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d121a6836a550bf4a869d37d3285bcca, type: 3}
 --- !u!4 &4511674655729247534 stripped
@@ -221,9 +237,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b52aefc4516176f4c9080989152f9db6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b52aefc4516176f4c9080989152f9db6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: b52aefc4516176f4c9080989152f9db6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: b52aefc4516176f4c9080989152f9db6, type: 3}
       propertyPath: m_Name
       value: Toon Muzzleflash 25 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: b52aefc4516176f4c9080989152f9db6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: b52aefc4516176f4c9080989152f9db6, type: 3}
       propertyPath: m_IsActive

@@ -652,9 +652,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 191073336235312180}
-  - component: {fileID: 8715303517738371917}
   - component: {fileID: 2028090793}
   - component: {fileID: 237767466}
+  - component: {fileID: 755794786494749784}
   m_Layer: 0
   m_Name: SlidingGate
   m_TagString: SlidingGate
@@ -681,64 +681,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -89.311, z: 0}
---- !u!114 &8715303517738371917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715232877698784910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbb51d2c73381f044ae6e3d7d572da6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletsInLoad: []
-  bulletInLoadTransform: []
-  loadValue: 5
-  firstLoadInitYear: 3
-  secondLoadInitYear: 7
-  thirdLoadInitYear: 11
-  firstBoxCol: {fileID: 4131415174636015580}
-  secondBoxCol: {fileID: 7710155041515702924}
-  thirdBoxCol: {fileID: 6147969658931606644}
-  bucketTransform: {fileID: 3197540807996957147}
-  bulletsInBucket: []
-  bulletTransform: {fileID: 1219390884128199045}
-  lastBulletsSpawnTransforms:
-  - {fileID: 1219390884128199045}
-  - {fileID: 740869853}
-  - {fileID: 282931489}
-  - {fileID: 451422584}
-  - {fileID: 155448151}
-  - {fileID: 1198486732}
-  - {fileID: 2082391103}
-  - {fileID: 245605243}
-  - {fileID: 449479966}
-  - {fileID: 740490516}
-  - {fileID: 1698881978}
-  - {fileID: 1195014391}
-  - {fileID: 218594106}
-  - {fileID: 1252028716}
-  - {fileID: 138761188}
-  bullet: {fileID: 5795311501664851115, guid: 8083631fb0f257b4abc4812aef648304, type: 3}
-  bulletGap: 1
-  bulletCounter: 0
-  moveDur: 0.1
-  coloredImages:
-  - {fileID: 6398783115774065892}
-  - {fileID: 4547203923149070726}
-  - {fileID: 12496523160883649}
-  blackandWhiteImages:
-  - {fileID: 5333039469267607368}
-  - {fileID: 7962868562582971569}
-  - {fileID: 7717392517959848966}
-  bulletsinFirstLoad: []
-  bulletinSecondLoad: []
-  bulletsinThirdLoad: []
-  greenMat: {fileID: 2100000, guid: fa78998610dad06499caac1f417b3278, type: 2}
-  firstGate: {fileID: 3154561616042595503}
-  SecondGate: {fileID: 6541500590572285826}
 --- !u!65 &2028090793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -765,6 +707,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.82, y: 16.1, z: 56.759216}
   m_Center: {x: -0.0000005170886, y: -6.9999995, z: -39.76959}
+--- !u!114 &755794786494749784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715232877698784910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e9d1bc02804a8ab40f3fa8c0277f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirstLoadInitYear: 3
+  SecondLoadInitYear: 7
+  ThirdLoadInitYear: 11
+  BucketTransform: {fileID: 3197540807996957147}
+  BulletsInBucket: []
+  ColoredImages:
+  - {fileID: 6398783115774065892}
+  - {fileID: 4547203923149070726}
+  - {fileID: 12496523160883649}
+  BlackAndWhiteImages:
+  - {fileID: 5333039469267607368}
+  - {fileID: 7962868562582971569}
+  - {fileID: 7717392517959848966}
+  BulletsinFirstLoad: []
+  BulletinSecondLoad: []
+  BulletsinThirdLoad: []
+  bulletsInLoad: []
+  bulletInLoadTransform: []
+  loadValue: 5
+  firstBoxCollider: {fileID: 4131415174636015580}
+  secondBoxCollider: {fileID: 7710155041515702924}
+  thirdBoxCollider: {fileID: 6147969658931606644}
+  bulletTransform: {fileID: 1219390884128199045}
+  lastBulletsSpawnTransforms:
+  - {fileID: 1219390884128199045}
+  - {fileID: 740869853}
+  - {fileID: 282931489}
+  - {fileID: 451422584}
+  - {fileID: 155448151}
+  - {fileID: 1198486732}
+  - {fileID: 2082391103}
+  - {fileID: 245605243}
+  - {fileID: 449479966}
+  - {fileID: 740490516}
+  - {fileID: 1698881978}
+  - {fileID: 1195014391}
+  - {fileID: 218594106}
+  - {fileID: 1252028716}
+  - {fileID: 138761188}
+  bullet: {fileID: 9187016938581331799, guid: a7173abddc746294ab144ce5c45e7479, type: 3}
+  bulletCounter: 0
+  bulletGap: 1
+  moveDur: 0.1
+  greenMat: {fileID: 2100000, guid: fa78998610dad06499caac1f417b3278, type: 2}
+  FirstGate: {fileID: 3154561616042595503}
+  SecondGate: {fileID: 6541500590572285826}
 --- !u!1 &782074624217482785
 GameObject:
   m_ObjectHideFlags: 0

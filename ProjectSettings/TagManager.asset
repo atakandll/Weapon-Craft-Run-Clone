@@ -8,7 +8,6 @@ TagManager:
   - Obstacle
   - MovementFaster
   - Enemy
-  - TouchedEnemy
   - EnemyPlayerDetector
   - Chest
   - MagazinesPlayerCollider
@@ -29,16 +28,12 @@ TagManager:
   - EndSniper
   - MagazinePlayerDetector
   - EndingObstacle
-  - Chain
   - MagazinesPlayerDetector
   - MagazinesPlayerCol
   - FirstSlidingGateCol
   - EndSnip
-  - BrickWall
-  - Stickman
-  - StickmansPlayerDetector
   - coin
-  - TouchedStickman
+  - Chain
   layers:
   - Default
   - TransparentFX
