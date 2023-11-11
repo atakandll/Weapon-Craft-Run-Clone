@@ -9,7 +9,7 @@ Watch the `gameplay` of the Weapon Craft Run Clone: https://youtu.be/ZQ-YTAaRjXo
 ![MagazineGift](https://github.com/atakandll/Weapon-Craft-Run-Clone/assets/130579265/718ff707-72a2-4a34-b47c-0e898e93650a)
 
 ## Process Summary
-The development of the Weapon Craft Run Clone was a rigorous one-week case study aimed at replicating and enhancing the core features of the original game within Unity 2021.3.29f1. The initial days were spent laying down the foundational mechanics, such as player movement and UI Panels. You can look at  the old scripts in project.
+The development of the Weapon Craft Run Clone was a rigorous one-week case study aimed at replicating and enhancing the core features of the original game within Unity 2021.3.29f1. The initial days were spent laying down the foundational mechanics, such as player movement and UI Panels. You can look at  the  `old scripts ` in project.
 
 Recognizing the need for refinement, the project was rebooted mid-week. This strategic pivot allowed for a comprehensive reevaluation and optimization of the game’s architecture, improving gameplay fluidity.
 
