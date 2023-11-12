@@ -84,7 +84,7 @@ namespace Managers.Weapon
         }
         IEnumerator MuzzleFlashoff()
         {
-            yield return new WaitForSeconds(0.3f); // Wait for 2 seconds
+            yield return new WaitForSeconds(0.3f); 
             muzzleFlashVFX.SetActive(false);
         
         }

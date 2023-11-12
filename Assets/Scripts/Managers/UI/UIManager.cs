@@ -118,7 +118,6 @@ namespace Managers.UI
             }
         }
 
-        // STARTING HUD
         public void OnPlayButtonPressed()
         {
             startButton.interactable = false;
@@ -187,7 +186,6 @@ namespace Managers.UI
 
         }
 
-        // Upgrades
         public void OnFireRateUpdatePressed()
         {
 
@@ -272,7 +270,6 @@ namespace Managers.UI
         public void DisplayInitYearReduce()
         {
 
-            // spawn olark yapalım
             reducerText.gameObject.SetActive(true);
             reducerText.rectTransform.anchoredPosition = reducerTextResetPos;
 

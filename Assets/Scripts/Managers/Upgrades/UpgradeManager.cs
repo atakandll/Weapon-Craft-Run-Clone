@@ -129,14 +129,6 @@ namespace Managers.Upgrades
            }
         }
 
-       
-
-       
-
-      
-
-       
-
         #endregion
     }
 }

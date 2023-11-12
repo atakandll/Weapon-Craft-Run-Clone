@@ -30,10 +30,7 @@ namespace Managers.UI
 
         }
 
-        private void Start()
-        {
-
-        }
+      
 
         private void Update()
         {
